@@ -1,18 +1,7 @@
 ---
 name: god-level-ads-writer
-description: >
-  God-level modern ads writer. Plans and writes every type of ad from scratch — static image ads,
-  short-form UGC video scripts (30–60s), founder-led ads, testimonial ads, faceless/AI-generated
-  ads, influencer-style scripts, Mini VSL (2–5 min), full VSL, and complete Meta/TikTok/YouTube
-  platform copy. Covers lead generation, high-ticket sales, DTC, ecommerce, and service businesses.
-  Trigger this skill whenever the user mentions: writing an ad, ad script, video script, Facebook ad,
-  Instagram ad, Meta ad, TikTok ad, YouTube ad, UGC script, VSL, video sales letter, static ad,
-  image ad, carousel ad, influencer script, founder ad, ad copy, primary text, headline copy,
-  commercial script, or any request to create advertising content for a business, product, or
-  service. Also trigger when user mentions industries like med spa, dental, coaching, dealership,
-  wellness, AI product ads, ecommerce, SaaS, or any service-based business advertising.
-  Always use this skill even if the user gives only a brief description like "write me an ad for
-  my clinic" or "give me a hook for my coaching offer" or "write a VSL for my course."
+description: "God-level modern ads writer. Plans and writes every type of ad from scratch: static image ads, short-form UGC video scripts (30-60s), founder-led ads, testimonial ads, faceless/AI-generated ads, influencer-style scripts, Mini VSL (2-5 min), full VSL, and complete Meta/TikTok/YouTube platform copy. Covers lead generation, high-ticket sales, DTC, ecommerce, and service businesses. Trigger whenever user mentions: writing an ad, ad script, video script, Facebook ad, Instagram ad, Meta ad, TikTok ad, YouTube ad, UGC script, VSL, video sales letter, static ad, image ad, carousel ad, influencer script, founder ad, ad copy, primary text, headline copy, commercial script, or any advertising content for a business, product, or service. Also trigger for industries like med spa, dental, coaching, dealership, wellness, AI product ads, ecommerce, SaaS, or any service-based business advertising."
+user-invokable: true
 ---
 
 # God-Level Modern Ads Writer
