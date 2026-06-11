@@ -12,12 +12,14 @@ html,body{background:#0c1330;}
   --ink:#ffffff; --accent:#c8f94c; --nav:#c8f94c; --hi:#a8b8ff;
   --sub:rgba(255,255,255,.86); --muted:rgba(255,255,255,.52);
   --dot:rgba(255,255,255,.26); --line:rgba(255,255,255,.14);
+  font-family:'Inter','Liberation Sans',sans-serif;
   background:radial-gradient(120% 90% at 72% 22%, #3a5cff 0%, #2347ec 34%, #1a36c4 62%, #122a9e 100%), #122a9e;
 }
 .canvas.light{
   --ink:#15171d; --accent:#2347ec; --nav:#5aa600; --hi:#2347ec;
   --sub:#4b4e57; --muted:rgba(21,23,29,.42);
   --dot:rgba(21,23,29,.16); --line:rgba(21,23,29,.10);
+  font-family:'Liberation Sans',Arial,sans-serif;
   background:radial-gradient(120% 95% at 50% 16%, #faf7ee 0%, #f3eede 42%, #ece6d4 72%, #e3dcc7 100%), #ece6d4;
 }
 /* vignette + grain for depth */
@@ -49,9 +51,9 @@ html,body{background:#0c1330;}
   text-transform:uppercase;margin-bottom:30px;display:flex;align-items:center;gap:18px;}
 .eyebrow::before{content:"";width:46px;height:2px;background:var(--accent);display:inline-block;border-radius:2px;}
 
-.headline{
-  font-family:'Liberation Sans',Arial,sans-serif;font-weight:700;
-  line-height:.96;letter-spacing:-.03em;color:var(--ink);}
+.headline{line-height:.96;color:var(--ink);}
+.dark .headline{font-family:'Inter Display','Inter',sans-serif;font-weight:900;letter-spacing:-.04em;}
+.light .headline{font-family:'Liberation Sans',Arial,sans-serif;font-weight:700;letter-spacing:-.03em;}
 .headline .hi{color:var(--hi);}
 
 .sub{font-size:32px;line-height:1.44;font-weight:400;color:var(--sub);letter-spacing:-.01em;}
