@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  :root{
+    --ink:#ffffff;
+    --accent:#c8f94c;          /* electric lime focal accent */
+    --accent-soft:#d9ff7a;
+    --muted:rgba(255,255,255,.52);
+    --sub:rgba(255,255,255,.86);
+    --periwinkle:#a8b8ff;
+    --mono:'Liberation Mono','DejaVu Sans Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#0c1330;}
+  .canvas{
+    position:relative;
+    width:1080px;height:1350px;
+    overflow:hidden;
+    /* layered cobalt background with an intentional top-light glow + vignette */
+    background:
+      radial-gradient(120% 90% at 72% 22%, #3a5cff 0%, #2347ec 34%, #1a36c4 62%, #122a9e 100%),
+      #122a9e;
+    font-family:'Inter','Liberation Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* soft vignette for depth */
+  .canvas::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(130% 100% at 50% 38%, rgba(0,0,0,0) 55%, rgba(8,16,54,.45) 100%);
+  }
+  /* faint grain so the flat blue does not band */
+  .canvas::before{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .frame{position:absolute;inset:0;padding:74px 76px 64px;z-index:3;}
+
+  /* ---------- header ---------- */
+  .head{display:flex;justify-content:space-between;align-items:center;}
+  .logo{display:flex;align-items:center;gap:13px;font-weight:800;font-size:30px;letter-spacing:-.02em;}
+  .logo .dot{width:19px;height:19px;border-radius:50%;
+    background:radial-gradient(circle at 32% 30%, #ffffff 0%, #ffffff 38%, #c8f94c 39%, #c8f94c 100%);
+    box-shadow:0 0 0 5px rgba(255,255,255,.10);}
+  .logo b{color:#fff;}
+  .logo span{color:var(--periwinkle);font-weight:800;}
+  .counter{font-family:var(--mono);font-size:21px;letter-spacing:.34em;color:var(--muted);}
+  .counter em{color:#fff;font-style:normal;}
+
+  /* ---------- hero visual ---------- */
+  .watch{position:absolute;top:150px;right:64px;width:330px;z-index:2;
+    filter:drop-shadow(0 34px 46px rgba(6,14,52,.55));}
+  .burst{position:absolute;top:158px;right:356px;width:120px;height:120px;z-index:2;}
+
+  /* ---------- copy block ---------- */
+  .copy{position:absolute;left:76px;right:76px;top:612px;z-index:3;}
+  .eyebrow{
+    font-size:21px;font-weight:700;letter-spacing:.42em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:30px;display:flex;align-items:center;gap:18px;}
+  .eyebrow::before{content:"";width:46px;height:2px;background:var(--accent);display:inline-block;border-radius:2px;}
+
+  .headline{
+    font-family:'Inter Display','Inter',sans-serif;font-weight:900;
+    font-size:166px;line-height:.9;letter-spacing:-.045em;color:#fff;
+  }
+  .headline .l2{position:relative;display:inline-block;}
+  .key{position:relative;display:inline-block;color:#fff;}
+  /* balanced marker ring sits behind the key phrase, centered on it */
+  .ring{position:absolute;left:51%;top:50%;transform:translate(-50%,-50%);
+    width:112%;height:140%;overflow:visible;z-index:-1;}
+
+  .sub{
+    margin-top:44px;max-width:820px;
+    font-size:32px;line-height:1.44;font-weight:400;color:var(--sub);letter-spacing:-.01em;}
+  .sub .arrow{color:var(--accent);font-weight:600;}
+
+  /* ---------- footer ---------- */
+  .foot{position:absolute;left:76px;right:76px;bottom:64px;z-index:3;
+    display:flex;justify-content:space-between;align-items:center;}
+  .dots{display:flex;gap:14px;align-items:center;}
+  .dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.28);display:block;}
+  .dots i.on{width:40px;border-radius:6px;background:var(--accent);}
+  .swipe{font-family:var(--mono);font-size:21px;letter-spacing:.30em;color:var(--muted);text-transform:lowercase;}
+  .swipe em{font-style:normal;color:var(--accent);}
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="frame">
+      <div class="head">
+        <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+        <div class="counter"><em>01</em> / 06</div>
+      </div>
+
+      <svg class="burst" viewBox="0 0 120 120" fill="none">
+        <g stroke="#c8f94c" stroke-width="7" stroke-linecap="round">
+          <line x1="96" y1="20" x2="70" y2="44"/>
+          <line x1="48" y1="8"  x2="48" y2="40"/>
+          <line x1="10" y1="40" x2="40" y2="56"/>
+        </g>
+      </svg>
+      <svg class="watch" viewBox="0 0 360 430" fill="none"></svg>
+
+      <div class="copy">
+        <div class="eyebrow">Speed-to-Lead Playbook</div>
+        <h1 class="headline">
+          <span class="l1">Win the</span><br/>
+          <span class="l2">first <span class="key">5&nbsp;min<span class="dotchar">.</span>
+            <svg class="ring" viewBox="0 0 1000 340" fill="none" preserveAspectRatio="none">
+              <path class="ringpath" d=""/>
+            </svg>
+          </span></span>
+        </h1>
+        <p class="sub">…or hand the deal to whoever answers faster.<br/>Here's how to be first. <span class="arrow">&rarr;</span></p>
+      </div>
+
+      <div class="foot">
+        <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="swipe">swipe <em>&rarr;</em></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* ---------- build the stopwatch ---------- */
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  const svg=document.querySelector('.watch');
+  const cx=180, cy=250, R=150;            // face geometry
+  function el(n,a){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+
+  // defs: chrome gradients
+  const defs=el('defs',{});
+  defs.innerHTML=`
+    <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"  stop-color="#fbfdff"/>
+      <stop offset=".22" stop-color="#cfd6df"/>
+      <stop offset=".46" stop-color="#9aa2ad"/>
+      <stop offset=".58" stop-color="#f2f5f8"/>
+      <stop offset=".74" stop-color="#b3bbc5"/>
+      <stop offset="1"  stop-color="#7e8691"/>
+    </linearGradient>
+    <radialGradient id="face" cx=".42" cy=".36" r=".75">
+      <stop offset="0" stop-color="#f7f5ee"/>
+      <stop offset=".7" stop-color="#ece8da"/>
+      <stop offset="1" stop-color="#d3cdba"/>
+    </radialGradient>
+    <linearGradient id="crown" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#aeb6c0"/>
+      <stop offset=".5" stop-color="#f1f4f7"/>
+      <stop offset="1" stop-color="#8d949f"/>
+    </linearGradient>`;
+  svg.appendChild(defs);
+
+  // crown stem + button (top), and a side button
+  svg.appendChild(el('rect',{x:cx-15,y:40,width:30,height:34,rx:6,fill:'url(#crown)'}));
+  svg.appendChild(el('rect',{x:cx-34,y:18,width:68,height:30,rx:14,fill:'url(#crown)',stroke:'#7c838d','stroke-width':1}));
+  // side button (upper-right ~1 o'clock)
+  const sbx=cx+Math.cos(-Math.PI/4)*R, sby=cy+Math.sin(-Math.PI/4)*R;
+  svg.appendChild(el('rect',{x:sbx-8,y:sby-26,width:30,height:24,rx:7,fill:'url(#crown)',stroke:'#7c838d','stroke-width':1,transform:`rotate(45 ${sbx} ${sby})`}));
+
+  // bezel + inner ring + face
+  svg.appendChild(el('circle',{cx,cy,r:R,fill:'url(#bezel)'}));
+  svg.appendChild(el('circle',{cx,cy,r:R-18,fill:'#8e95a0'}));
+  svg.appendChild(el('circle',{cx,cy,r:R-22,fill:'url(#face)'}));
+
+  // ticks + numbers
+  const g=el('g',{});
+  for(let i=0;i<60;i++){
+    const a=(i/60)*2*Math.PI - Math.PI/2;
+    const major=i%5===0;
+    const r1=R-30, r2=R-(major?44:37);
+    g.appendChild(el('line',{
+      x1:cx+Math.cos(a)*r1, y1:cy+Math.sin(a)*r1,
+      x2:cx+Math.cos(a)*r2, y2:cy+Math.sin(a)*r2,
+      stroke:major?'#3c4047':'#9b9888','stroke-width':major?3.4:1.6,'stroke-linecap':'round'}));
+  }
+  svg.appendChild(g);
+  // a few numerals
+  const nums=[[0,'60'],[15,'15'],[30,'30'],[45,'45']];
+  nums.forEach(([i,t])=>{
+    const a=(i/60)*2*Math.PI - Math.PI/2, rr=R-64;
+    const x=cx+Math.cos(a)*rr, y=cy+Math.sin(a)*rr;
+    const tx=el('text',{x,y,fill:'#43474e','font-size':19,'font-family':'Inter, sans-serif','font-weight':600,'text-anchor':'middle','dominant-baseline':'central'});
+    tx.textContent=t; svg.appendChild(tx);
+  });
+
+  // hands: long second hand near top, shorter minute hand
+  function hand(angleDeg,len,w,color,back){
+    const a=(angleDeg-90)*Math.PI/180;
+    const x2=cx+Math.cos(a)*len, y2=cy+Math.sin(a)*len;
+    const x1=cx-Math.cos(a)*(back||14), y1=cy-Math.sin(a)*(back||14);
+    svg.appendChild(el('line',{x1,y1,x2,y2,stroke:color,'stroke-width':w,'stroke-linecap':'round'}));
+  }
+  hand(-18,120,4.2,'#2b2f36',26);   // second hand, just left of 12
+  hand(58,78,6,'#2b2f36',18);       // minute hand
+  // center hub
+  svg.appendChild(el('circle',{cx,cy,r:11,fill:'#22262c'}));
+  svg.appendChild(el('circle',{cx,cy,r:4.4,fill:'#c8f94c'}));
+})();
+
+/* ---------- draw a balanced marker ring around "5 min" ---------- */
+(function(){
+  // symmetric ellipse with a small gap at 12 o'clock => reads hand-circled, not lopsided
+  const cx=500, cy=170, rx=470, ry=150;
+  const gap=13*Math.PI/180;                 // half-gap at top
+  const S=[cx+rx*Math.sin(gap), cy-ry*Math.cos(gap)];   // start, right of top
+  const E=[cx-rx*Math.sin(gap), cy-ry*Math.cos(gap)];   // end, left of top
+  // major arc the long way round (clockwise): right -> bottom -> left
+  const d=`M ${S[0].toFixed(1)} ${S[1].toFixed(1)} A ${rx} ${ry} 0 1 1 ${E[0].toFixed(1)} ${E[1].toFixed(1)}`;
+  const p=document.querySelector('.ringpath');
+  p.setAttribute('d',d);
+  p.setAttribute('stroke','#c8f94c');
+  p.setAttribute('stroke-width','10');
+  p.setAttribute('stroke-linecap','round');
+  p.setAttribute('fill','none');
+  document.querySelector('.ring').setAttribute('transform','rotate(-2)');
+})();
+</script>
+</body>
+</html>
