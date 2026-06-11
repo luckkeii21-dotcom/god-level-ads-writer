@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#ebebe9;}
+  .canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+    background:linear-gradient(180deg,#eeeeec 0%,#e9e9e7 55%,#e4e4e2 100%);
+    font-family:'Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+
+  .hero{position:absolute;left:50%;transform:translateX(-50%);width:1010px;top:300px;z-index:1;
+    -webkit-mask:linear-gradient(180deg,transparent 0,#000 9%,#000 90%,transparent 100%);
+            mask:linear-gradient(180deg,transparent 0,#000 9%,#000 90%,transparent 100%);}
+
+  .frame{position:absolute;inset:0;z-index:3;}
+  .logo{position:absolute;left:84px;top:74px;display:flex;align-items:center;gap:13px;font-weight:700;font-size:30px;letter-spacing:-.02em;color:#15171d;}
+  .logo .dot{width:19px;height:19px;border-radius:50%;background:#2347ec;box-shadow:0 0 0 5px rgba(35,71,236,.10);}
+  .logo span{color:#2347ec;}
+
+  .head{position:absolute;left:84px;top:168px;}
+  .k1{font-weight:700;font-size:106px;line-height:.92;letter-spacing:-.035em;color:#16181f;}
+  .k2{font-family:'Z003','URW Chancery L',cursive;font-style:italic;font-size:152px;line-height:.8;
+    color:#2347ec;margin-top:6px;margin-left:-4px;}
+  .uline{display:block;margin-top:-4px;}
+  .sub{margin-top:42px;max-width:360px;font-size:29px;line-height:1.34;color:#54585f;font-weight:400;letter-spacing:-.01em;}
+
+  .url{position:absolute;left:84px;bottom:60px;font-size:24px;letter-spacing:.02em;color:#3f4a57;font-weight:600;}
+</style></head>
+<body>
+  <div class="canvas">
+    <img class="hero" src="assets/red-aligned-1.png" alt="phone jet"/>
+    <div class="frame">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="head">
+        <div class="k1">Always</div>
+        <div class="k2">first.</div>
+        <svg class="uline" width="240" height="26" viewBox="0 0 240 26" fill="none">
+          <path d="M6 17 C 68 6, 170 6, 232 12" stroke="#2347ec" stroke-width="5" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div class="sub">A live AI call to every new lead in under 60 seconds.</div>
+      </div>
+      <div class="url">www.rizzdial.com</div>
+    </div>
+  </div>
+</body></html>
