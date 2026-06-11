@@ -4,17 +4,23 @@
 <style>
   .copy{position:absolute;left:76px;top:158px;z-index:3;}
   .headline{font-size:67px;line-height:1;}
-  .grid{position:absolute;left:76px;right:76px;top:402px;display:grid;grid-template-columns:1fr 1fr;
-    gap:26px;z-index:3;}
-  .card{position:relative;border-radius:22px;padding:32px 34px 34px;
-    background:linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.34));
-    border:1px solid rgba(21,23,29,.08);box-shadow:0 14px 30px rgba(120,108,74,.10);
-    min-height:232px;}
-  .tile{width:62px;height:62px;border-radius:16px;background:rgba(35,71,236,.09);
-    display:flex;align-items:center;justify-content:center;margin-bottom:24px;}
-  .card h3{font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:12px;}
-  .card p{font-size:22.5px;line-height:1.34;color:#6c6f77;letter-spacing:-.01em;max-width:330px;}
-  svg.ic{width:32px;height:32px;}
+  .grid{position:absolute;left:76px;right:76px;top:398px;display:grid;grid-template-columns:1fr 1fr;
+    gap:24px;z-index:3;}
+  .card{position:relative;border-radius:22px;padding:32px 32px 34px;min-height:238px;
+    background:#ffffff;border:1px solid rgba(21,23,29,.07);box-shadow:0 18px 38px rgba(120,108,74,.13);}
+  .tile{width:62px;height:62px;border-radius:16px;margin-bottom:24px;
+    background:linear-gradient(140deg,#4a68ff,#2347ec);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 16px rgba(35,71,236,.28);}
+  .tile svg{width:32px;height:32px;}
+  .idx{position:absolute;top:30px;right:32px;font-family:var(--mono);font-size:17px;letter-spacing:.18em;color:rgba(21,23,29,.26);}
+  .card h3{font-size:29px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:11px;}
+  .card p{font-size:22px;line-height:1.34;color:#6c6f77;letter-spacing:-.01em;max-width:330px;}
+  /* featured */
+  .card.feat{background:linear-gradient(155deg,#3358f6,#1d3ccb);border:none;box-shadow:0 22px 44px rgba(29,60,203,.4);}
+  .feat .tile{background:rgba(255,255,255,.16);box-shadow:none;}
+  .feat h3{color:#fff;}
+  .feat p{color:rgba(255,255,255,.82);}
+  .feat .idx{color:rgba(255,255,255,.55);}
 </style></head>
 <body>
   <div class="canvas light">
@@ -30,33 +36,39 @@
       </div>
 
       <div class="grid">
-        <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.5C3 13 11 21 19.5 21A1.5 1.5 0 0 0 21 19.5v-2a1.2 1.2 0 0 0-1-1.2l-3.2-.6a1.2 1.2 0 0 0-1.2.5l-.9 1.2a13 13 0 0 1-5.3-5.3l1.2-.9a1.2 1.2 0 0 0 .5-1.2l-.6-3.2a1.2 1.2 0 0 0-1.2-1z"/></svg></div>
+        <div class="card feat">
+          <span class="idx">01</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.5C3 13 11 21 19.5 21A1.5 1.5 0 0 0 21 19.5v-2a1.2 1.2 0 0 0-1-1.2l-3.2-.6a1.2 1.2 0 0 0-1.2.5l-.9 1.2a13 13 0 0 1-5.3-5.3l1.2-.9a1.2 1.2 0 0 0 .5-1.2l-.6-3.2a1.2 1.2 0 0 0-1.2-1z"/></svg></div>
           <h3>AI Calling</h3>
           <p>A live AI voice agent dials every lead in seconds.</p>
         </div>
         <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h3l5 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a3.5 3.5 0 0 1 0 6"/><path d="M19 6.5a7 7 0 0 1 0 11"/></svg></div>
+          <span class="idx">02</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h3l5 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a3.5 3.5 0 0 1 0 6"/><path d="M19 6.5a7 7 0 0 1 0 11"/></svg></div>
           <h3>Campaign Ops</h3>
           <p>Launch &amp; manage outbound campaigns in one place.</p>
         </div>
         <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><circle cx="8.5" cy="10.5" r="1.1" fill="#2347ec" stroke="none"/><circle cx="12" cy="10.5" r="1.1" fill="#2347ec" stroke="none"/><circle cx="15.5" cy="10.5" r="1.1" fill="#2347ec" stroke="none"/></svg></div>
+          <span class="idx">03</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><circle cx="8.5" cy="10.5" r="1.1" fill="#fff" stroke="none"/><circle cx="12" cy="10.5" r="1.1" fill="#fff" stroke="none"/><circle cx="15.5" cy="10.5" r="1.1" fill="#fff" stroke="none"/></svg></div>
           <h3>Messaging Follow-Up</h3>
           <p>Automatic multi-touch follow-up so no lead cools.</p>
         </div>
         <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <span class="idx">04</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
           <h3>Caller Trust</h3>
           <p>Branded, compliant caller ID buyers actually answer.</p>
         </div>
         <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="11" height="11" rx="2.4"/><rect x="9" y="9" width="11" height="11" rx="2.4"/></svg></div>
+          <span class="idx">05</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="11" height="11" rx="2.4"/><rect x="9" y="9" width="11" height="11" rx="2.4"/></svg></div>
           <h3>Partner Workspaces</h3>
           <p>Run outbound for multiple clients or teams.</p>
         </div>
         <div class="card">
-          <div class="tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V11"/><path d="M12 20V4"/><path d="M19 20v-6"/></svg></div>
+          <span class="idx">06</span>
+          <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V11"/><path d="M12 20V4"/><path d="M19 20v-6"/></svg></div>
           <h3>Analytics</h3>
           <p>Every call, conversion, and outcome — live.</p>
         </div>

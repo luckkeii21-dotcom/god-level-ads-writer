@@ -36,8 +36,8 @@ html,body{background:#0c1330;}
 .head{display:flex;justify-content:space-between;align-items:center;}
 .logo{display:flex;align-items:center;gap:13px;font-weight:800;font-size:30px;letter-spacing:-.02em;color:var(--ink);}
 .logo .dot{width:19px;height:19px;border-radius:50%;}
-.dark .logo .dot{background:radial-gradient(circle at 32% 30%, #fff 0%, #fff 38%, #c8f94c 39%, #c8f94c 100%);box-shadow:0 0 0 5px rgba(255,255,255,.10);}
-.light .logo .dot{background:radial-gradient(circle at 32% 30%, #fff 0%, #fff 36%, #2347ec 37%, #2347ec 100%);box-shadow:0 0 0 5px rgba(35,71,236,.10);}
+.dark .logo .dot{background:#ffffff;box-shadow:0 0 0 5px rgba(255,255,255,.10);}
+.light .logo .dot{background:#2347ec;box-shadow:0 0 0 5px rgba(35,71,236,.12);}
 .logo b{color:var(--ink);}
 .logo span{color:var(--hi);font-weight:800;}
 .counter{font-family:var(--mono);font-size:21px;letter-spacing:.34em;color:var(--muted);}

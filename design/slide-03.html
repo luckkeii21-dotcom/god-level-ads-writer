@@ -2,9 +2,16 @@
 <html lang="en"><head><meta charset="utf-8"/>
 <link rel="stylesheet" href="common.css"/>
 <style>
-  .hero{position:absolute;top:300px;left:40px;width:1000px;height:460px;z-index:2;}
-  .hero svg{overflow:visible;}
-  .copy{position:absolute;left:76px;right:76px;top:868px;z-index:3;}
+  .phone{position:absolute;top:336px;left:74px;width:912px;z-index:2;
+    filter:drop-shadow(0 30px 42px rgba(8,16,60,.50));}
+  .burst{position:absolute;top:352px;left:74px;width:120px;height:120px;z-index:2;}
+  .bubble{position:absolute;top:560px;left:120px;z-index:3;
+    background:#2f63ff;color:#fff;font-family:'Inter Display','Inter',sans-serif;font-weight:800;
+    font-size:44px;letter-spacing:-.02em;padding:16px 30px 20px;border-radius:22px;
+    box-shadow:0 16px 30px rgba(8,16,60,.4);}
+  .bubble::after{content:"";position:absolute;left:34px;bottom:-18px;
+    border-left:0 solid transparent;border-right:30px solid transparent;border-top:24px solid #2f63ff;}
+  .copy{position:absolute;left:76px;right:76px;top:872px;z-index:3;}
   .headline{font-size:118px;line-height:.96;}
   .sub{margin-top:34px;max-width:860px;}
 </style></head>
@@ -16,49 +23,15 @@
         <div class="counter"><em>03</em> / 06</div>
       </div>
 
-      <div class="hero">
-        <svg viewBox="0 0 1000 460" fill="none">
-          <defs>
-            <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#f0463d"/><stop offset=".5" stop-color="#d62c25"/><stop offset="1" stop-color="#a81b16"/>
-            </linearGradient>
-            <radialGradient id="cap" cx=".4" cy=".35" r=".75">
-              <stop offset="0" stop-color="#ff6258"/><stop offset="1" stop-color="#c5241d"/>
-            </radialGradient>
-            <filter id="ds" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#0a1a6e" flood-opacity="0.45"/>
-            </filter>
-          </defs>
-
-          <!-- burst marks -->
-          <g stroke="#c8f94c" stroke-width="8" stroke-linecap="round">
-            <line x1="150" y1="120" x2="180" y2="158"/>
-            <line x1="110" y1="160" x2="156" y2="178"/>
-            <line x1="120" y1="215" x2="166" y2="210"/>
-          </g>
-
-          <!-- coiled cord -->
-          <g id="cord" stroke="url(#red)" stroke-width="11" fill="none" stroke-linecap="round"></g>
-
-          <!-- handset -->
-          <g filter="url(#ds)">
-            <path d="M250 250 Q 490 110 720 215" stroke="url(#red)" stroke-width="92" stroke-linecap="round" fill="none"/>
-            <circle cx="250" cy="255" r="62" fill="url(#cap)"/>
-            <circle cx="722" cy="214" r="56" fill="url(#cap)"/>
-            <!-- speaker faces -->
-            <ellipse cx="232" cy="292" rx="34" ry="22" fill="#8c130f" opacity=".55" transform="rotate(-22 232 292)"/>
-            <ellipse cx="742" cy="178" rx="30" ry="20" fill="#8c130f" opacity=".55" transform="rotate(-22 742 178)"/>
-            <!-- gloss -->
-            <path d="M300 200 Q 490 96 690 188" stroke="#ff8b83" stroke-width="14" stroke-linecap="round" fill="none" opacity=".7"/>
-          </g>
-
-          <!-- Hello bubble -->
-          <g>
-            <path d="M150 330 h210 a24 24 0 0 1 24 24 v54 a24 24 0 0 1 -24 24 h-150 l-30 34 v-34 h-30 a24 24 0 0 1 -24 -24 v-54 a24 24 0 0 1 24 -24 z" fill="#2f63ff"/>
-            <text x="172" y="392" fill="#fff" font-family="'Inter Display','Inter',sans-serif" font-weight="800" font-size="46" letter-spacing="-1">Hello.</text>
-          </g>
-        </svg>
-      </div>
+      <svg class="burst" viewBox="0 0 120 120" fill="none">
+        <g stroke="#c8f94c" stroke-width="8" stroke-linecap="round">
+          <line x1="92" y1="22" x2="66" y2="48"/>
+          <line x1="44" y1="10" x2="44" y2="44"/>
+          <line x1="10" y1="44" x2="42" y2="58"/>
+        </g>
+      </svg>
+      <img class="phone" src="assets/red-phone.png" alt="red telephone handset"/>
+      <div class="bubble">Hello.</div>
 
       <div class="copy">
         <div class="eyebrow">The Fix</div>
@@ -72,20 +45,4 @@
       </div>
     </div>
   </div>
-<script>
-// build a stretched telephone coil from the mouthpiece toward the right edge
-(function(){
-  const cord=document.getElementById('cord');
-  const x0=722,y0=214, x1=965,y1=150, rings=9;
-  for(let i=0;i<rings;i++){
-    const t=i/(rings-1);
-    const cx=x0+(x1-x0)*t, cy=y0+(y1-y0)*t;
-    const p=document.createElementNS('http://www.w3.org/2000/svg','ellipse');
-    p.setAttribute('cx',cx); p.setAttribute('cy',cy);
-    p.setAttribute('rx',12); p.setAttribute('ry',30);
-    p.setAttribute('transform',`rotate(-15 ${cx} ${cy})`);
-    cord.appendChild(p);
-  }
-})();
-</script>
 </body></html>
