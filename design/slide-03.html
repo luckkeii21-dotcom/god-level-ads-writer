@@ -2,10 +2,14 @@
 <html lang="en"><head><meta charset="utf-8"/>
 <link rel="stylesheet" href="common.css"/>
 <style>
-  .phone{position:absolute;top:336px;left:74px;width:912px;z-index:2;
-    filter:drop-shadow(0 30px 42px rgba(8,16,60,.50));}
-  .burst{position:absolute;top:352px;left:74px;width:120px;height:120px;z-index:2;}
-  .bubble{position:absolute;top:474px;left:92px;z-index:3;
+  .glow{position:absolute;top:300px;left:50%;transform:translateX(-50%);
+    width:780px;height:420px;z-index:1;pointer-events:none;
+    background:radial-gradient(closest-side, rgba(108,140,255,.55), rgba(108,140,255,0) 70%);
+    filter:blur(8px);}
+  .phone{position:absolute;top:362px;left:50%;transform:translateX(-50%);width:912px;z-index:2;
+    filter:drop-shadow(0 32px 44px rgba(6,12,52,.55));}
+  .burst{position:absolute;top:372px;left:96px;width:120px;height:120px;z-index:2;}
+  .bubble{position:absolute;top:516px;left:126px;z-index:3;
     background:#2f63ff;color:#fff;font-family:'Inter Display','Inter',sans-serif;font-weight:800;
     font-size:44px;letter-spacing:-.02em;padding:16px 32px 20px;border-radius:22px;
     box-shadow:0 18px 32px rgba(8,16,60,.42);}
@@ -23,6 +27,7 @@
         <div class="counter"><em>03</em> / 06</div>
       </div>
 
+      <div class="glow"></div>
       <svg class="burst" viewBox="0 0 120 120" fill="none">
         <g stroke="#c8f94c" stroke-width="8" stroke-linecap="round">
           <line x1="92" y1="22" x2="66" y2="48"/>
