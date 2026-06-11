@@ -178,27 +178,48 @@
       stroke:major?'#3c4047':'#9b9888','stroke-width':major?3.4:1.6,'stroke-linecap':'round'}));
   }
   svg.appendChild(g);
-  // a few numerals
-  const nums=[[0,'60'],[15,'15'],[30,'30'],[45,'45']];
+  // numerals — the 5 is emphasised so the dial clearly reads five
+  const ACCENT='#5aa600';
+  const nums=[[15,'15'],[30,'30'],[45,'45'],[0,'60']];
   nums.forEach(([i,t])=>{
     const a=(i/60)*2*Math.PI - Math.PI/2, rr=R-64;
     const x=cx+Math.cos(a)*rr, y=cy+Math.sin(a)*rr;
-    const tx=el('text',{x,y,fill:'#43474e','font-size':19,'font-family':'Inter, sans-serif','font-weight':600,'text-anchor':'middle','dominant-baseline':'central'});
+    const tx=el('text',{x,y,fill:'#54585f','font-size':18,'font-family':'Inter, sans-serif','font-weight':600,'text-anchor':'middle','dominant-baseline':'central'});
     tx.textContent=t; svg.appendChild(tx);
   });
+  // the "5" numeral + its tick, highlighted
+  (function(){
+    const a=(5/60)*2*Math.PI - Math.PI/2;
+    g.appendChild(el('line',{
+      x1:cx+Math.cos(a)*(R-30), y1:cy+Math.sin(a)*(R-30),
+      x2:cx+Math.cos(a)*(R-46), y2:cy+Math.sin(a)*(R-46),
+      stroke:ACCENT,'stroke-width':4.6,'stroke-linecap':'round'}));
+    const rr=R-64, x=cx+Math.cos(a)*rr, y=cy+Math.sin(a)*rr;
+    const tx=el('text',{x,y,fill:ACCENT,'font-size':23,'font-family':'Inter, sans-serif','font-weight':800,'text-anchor':'middle','dominant-baseline':'central'});
+    tx.textContent='5'; svg.appendChild(tx);
+  })();
 
-  // hands: long second hand near top, shorter minute hand
+  // accent sweep showing the 0 -> 5 span along the dial
+  (function(){
+    const rr=R-30, a0=-Math.PI/2, a1=(5/60)*2*Math.PI - Math.PI/2;
+    const x0=cx+Math.cos(a0)*rr, y0=cy+Math.sin(a0)*rr;
+    const x1=cx+Math.cos(a1)*rr, y1=cy+Math.sin(a1)*rr;
+    svg.appendChild(el('path',{d:`M ${x0} ${y0} A ${rr} ${rr} 0 0 1 ${x1} ${y1}`,
+      stroke:ACCENT,'stroke-width':6,fill:'none','stroke-linecap':'round'}));
+    svg.appendChild(el('circle',{cx:x0,cy:y0,r:4.5,fill:ACCENT}));
+  })();
+
+  // single bold sweep hand pointing exactly at the 5 mark
   function hand(angleDeg,len,w,color,back){
     const a=(angleDeg-90)*Math.PI/180;
     const x2=cx+Math.cos(a)*len, y2=cy+Math.sin(a)*len;
     const x1=cx-Math.cos(a)*(back||14), y1=cy-Math.sin(a)*(back||14);
     svg.appendChild(el('line',{x1,y1,x2,y2,stroke:color,'stroke-width':w,'stroke-linecap':'round'}));
   }
-  hand(-18,120,4.2,'#2b2f36',26);   // second hand, just left of 12
-  hand(58,78,6,'#2b2f36',18);       // minute hand
+  hand(30,122,5,'#2b2f36',26);   // points straight at the 5
   // center hub
   svg.appendChild(el('circle',{cx,cy,r:11,fill:'#22262c'}));
-  svg.appendChild(el('circle',{cx,cy,r:4.4,fill:'#c8f94c'}));
+  svg.appendChild(el('circle',{cx,cy,r:4.4,fill:ACCENT}));
 })();
 
 /* ---------- draw a balanced marker ring around "5 min" ---------- */
