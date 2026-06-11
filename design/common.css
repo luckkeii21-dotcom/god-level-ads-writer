@@ -1,0 +1,71 @@
+/* ===== rizzdial carousel — shared design system ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#0c1330;}
+
+.canvas{
+  position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;
+  --mono:'Liberation Mono','DejaVu Sans Mono',monospace;
+}
+/* ---- themes ---- */
+.canvas.dark{
+  --ink:#ffffff; --accent:#c8f94c; --nav:#c8f94c; --hi:#a8b8ff;
+  --sub:rgba(255,255,255,.86); --muted:rgba(255,255,255,.52);
+  --dot:rgba(255,255,255,.26); --line:rgba(255,255,255,.14);
+  background:radial-gradient(120% 90% at 72% 22%, #3a5cff 0%, #2347ec 34%, #1a36c4 62%, #122a9e 100%), #122a9e;
+}
+.canvas.light{
+  --ink:#15171d; --accent:#2347ec; --nav:#5aa600; --hi:#2347ec;
+  --sub:#4b4e57; --muted:rgba(21,23,29,.42);
+  --dot:rgba(21,23,29,.16); --line:rgba(21,23,29,.10);
+  background:radial-gradient(120% 95% at 50% 16%, #faf7ee 0%, #f3eede 42%, #ece6d4 72%, #e3dcc7 100%), #ece6d4;
+}
+/* vignette + grain for depth */
+.canvas::after{content:"";position:absolute;inset:0;pointer-events:none;}
+.canvas.dark::after{background:radial-gradient(130% 100% at 50% 38%, rgba(0,0,0,0) 55%, rgba(8,16,54,.45) 100%);}
+.canvas.light::after{background:radial-gradient(130% 105% at 50% 30%, rgba(0,0,0,0) 60%, rgba(120,108,74,.16) 100%);}
+.canvas::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+.canvas.light::before{opacity:.04;}
+
+.frame{position:absolute;inset:0;padding:74px 76px 64px;z-index:3;}
+
+/* ---------- header ---------- */
+.head{display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:13px;font-weight:800;font-size:30px;letter-spacing:-.02em;color:var(--ink);}
+.logo .dot{width:19px;height:19px;border-radius:50%;}
+.dark .logo .dot{background:radial-gradient(circle at 32% 30%, #fff 0%, #fff 38%, #c8f94c 39%, #c8f94c 100%);box-shadow:0 0 0 5px rgba(255,255,255,.10);}
+.light .logo .dot{background:radial-gradient(circle at 32% 30%, #fff 0%, #fff 36%, #2347ec 37%, #2347ec 100%);box-shadow:0 0 0 5px rgba(35,71,236,.10);}
+.logo b{color:var(--ink);}
+.logo span{color:var(--hi);font-weight:800;}
+.counter{font-family:var(--mono);font-size:21px;letter-spacing:.34em;color:var(--muted);}
+.counter em{color:var(--ink);font-style:normal;}
+
+/* ---------- copy ---------- */
+.eyebrow{
+  font-size:21px;font-weight:700;letter-spacing:.42em;color:var(--accent);
+  text-transform:uppercase;margin-bottom:30px;display:flex;align-items:center;gap:18px;}
+.eyebrow::before{content:"";width:46px;height:2px;background:var(--accent);display:inline-block;border-radius:2px;}
+
+.headline{
+  font-family:'Inter Display','Inter',sans-serif;font-weight:900;
+  line-height:.92;letter-spacing:-.04em;color:var(--ink);}
+.headline .hi{color:var(--hi);}
+
+.sub{font-size:32px;line-height:1.44;font-weight:400;color:var(--sub);letter-spacing:-.01em;}
+.sub b{color:var(--ink);font-weight:700;}
+.sub .u{ text-decoration:none;border-bottom:3px solid var(--accent);padding-bottom:1px;color:var(--ink);font-weight:700;}
+
+/* ---------- footer ---------- */
+.foot{position:absolute;left:76px;right:76px;bottom:64px;z-index:3;
+  display:flex;justify-content:space-between;align-items:center;}
+.dots{display:flex;gap:14px;align-items:center;}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--dot);display:block;}
+.dots i.on{width:40px;border-radius:6px;background:var(--nav);box-shadow:0 2px 10px color-mix(in srgb, var(--nav) 55%, transparent);}
+.swipe{font-family:var(--mono);font-size:21px;letter-spacing:.30em;color:var(--muted);text-transform:lowercase;}
+.swipe em{font-style:normal;color:var(--nav);font-weight:700;}
+
+/* balanced marker ring (shared) */
+.ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:visible;z-index:-1;}

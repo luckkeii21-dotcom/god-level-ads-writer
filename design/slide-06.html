@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .hero{position:absolute;left:50%;top:206px;transform:translateX(-50%);width:330px;z-index:2;}
+  .hero svg{filter:drop-shadow(0 30px 40px rgba(90,80,50,.22));}
+  .shadow{position:absolute;left:50%;top:598px;transform:translateX(-50%);
+    width:228px;height:34px;border-radius:50%;
+    background:radial-gradient(closest-side, rgba(70,62,40,.30), rgba(70,62,40,0));z-index:1;}
+  .copy{position:absolute;left:76px;right:76px;top:872px;z-index:3;}
+  .headline{font-size:74px;line-height:1.0;}
+  .cta{display:inline-flex;align-items:center;gap:12px;margin-top:42px;
+    background:#15171d;color:#fff;font-size:28px;font-weight:700;letter-spacing:-.01em;
+    padding:24px 38px;border-radius:100px;box-shadow:0 16px 30px rgba(21,23,29,.22);}
+  .cta b{color:#fff;font-weight:700;}
+  .cta .u{color:var(--hi);}
+</style></head>
+<body>
+  <div class="canvas light">
+    <div class="frame">
+      <div class="head">
+        <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+        <div class="counter"><em>06</em> / 06</div>
+      </div>
+
+      <div class="shadow"></div>
+      <div class="hero"><svg viewBox="0 0 360 430" fill="none"></svg></div>
+
+      <div class="copy">
+        <div class="eyebrow">Your Move</div>
+        <h1 class="headline">Answer every lead<br/>in <span class="hi">10 seconds.</span></h1>
+        <div class="cta"><b>Book a demo</b>&nbsp;<span style="color:#9aa0aa">&rarr;</span>&nbsp;<span style="color:#9fb4ff">rizzdial.com</span></div>
+      </div>
+
+      <div class="foot">
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i></div>
+      </div>
+    </div>
+  </div>
+<script src="lib.js"></script>
+<script>drawStopwatch(document.querySelector('.hero svg'), 10);</script>
+</body></html>

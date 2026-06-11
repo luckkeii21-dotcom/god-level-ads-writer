@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .copy{position:absolute;left:76px;right:76px;top:158px;z-index:3;}
+  .headline{font-size:84px;line-height:.96;}
+  .stats{position:absolute;left:76px;right:76px;top:486px;z-index:3;}
+  .stat{display:flex;align-items:center;gap:48px;padding:38px 4px;border-top:1px solid var(--line);}
+  .stat:last-child{border-bottom:1px solid var(--line);}
+  .num{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:108px;line-height:1;
+    letter-spacing:-.045em;color:#fff;width:300px;position:relative;display:flex;align-items:baseline;}
+  .num .lt{font-size:64px;font-weight:800;margin-right:2px;opacity:.9;}
+  .num small{font-size:46px;font-weight:800;margin-left:2px;}
+  .desc{font-size:31px;line-height:1.3;color:var(--sub);letter-spacing:-.01em;}
+  .key{position:relative;display:inline-flex;align-items:baseline;}
+  .ring{width:150%;height:158%;}
+</style></head>
+<body>
+  <div class="canvas dark">
+    <div class="frame">
+      <div class="head">
+        <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+        <div class="counter"><em>05</em> / 06</div>
+      </div>
+
+      <div class="copy">
+        <div class="eyebrow">The Proof</div>
+        <h1 class="headline">These aren't promises.<br/>They're the <span class="hi">numbers.</span></h1>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="num"><span class="lt">&lt;</span>60<small>s</small></div>
+          <div class="desc">from new lead<br/>to a live call</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span class="key">98<small>%</small>
+            <svg class="ring" viewBox="0 0 1000 340" fill="none" preserveAspectRatio="none"><path class="ringpath" d=""/></svg>
+          </span></div>
+          <div class="desc">of leads followed up,<br/>automatically</div>
+        </div>
+        <div class="stat">
+          <div class="num">5/5</div>
+          <div class="desc">rated on G2 by the<br/>teams who use it</div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i></div>
+        <div class="swipe">swipe <em>&rarr;</em></div>
+      </div>
+    </div>
+  </div>
+<script src="lib.js"></script>
+<script>drawRing(document.querySelector('.ringpath'), '#c8f94c', -2);</script>
+</body></html>
