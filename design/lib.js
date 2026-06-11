@@ -37,24 +37,28 @@ function drawStopwatch(svg, mark){
   }
   svg.appendChild(g);
   // numerals (skip the one we highlight)
-  [[15,'15'],[30,'30'],[45,'45'],[0,'60']].filter(([i])=>i!==mark).forEach(([i,t])=>{
+  [[15,'15'],[30,'30'],[45,'45'],[0,'60']].filter(([i])=>i!==(mark%60)).forEach(([i,t])=>{
     const a=(i/60)*2*Math.PI-Math.PI/2, rr=R-64;
-    const tx=E('text',{x:cx+Math.cos(a)*rr,y:cy+Math.sin(a)*rr,fill:'#54585f','font-size':18,'font-family':'Inter, sans-serif','font-weight':600,'text-anchor':'middle','dominant-baseline':'central'});
+    const tx=E('text',{x:cx+Math.cos(a)*rr,y:cy+Math.sin(a)*rr,fill:'#54585f','font-size':18,'font-family':'Liberation Sans, sans-serif','font-weight':700,'text-anchor':'middle','dominant-baseline':'central'});
     tx.textContent=t; svg.appendChild(tx);
   });
   // highlighted mark numeral + tick
   (function(){
     const a=(mark/60)*2*Math.PI-Math.PI/2;
     g.appendChild(E('line',{x1:cx+Math.cos(a)*(R-30),y1:cy+Math.sin(a)*(R-30),x2:cx+Math.cos(a)*(R-46),y2:cy+Math.sin(a)*(R-46),stroke:ACCENT,'stroke-width':4.6,'stroke-linecap':'round'}));
-    const rr=R-64, tx=E('text',{x:cx+Math.cos(a)*rr,y:cy+Math.sin(a)*rr,fill:ACCENT,'font-size':23,'font-family':'Inter, sans-serif','font-weight':800,'text-anchor':'middle','dominant-baseline':'central'});
+    const rr=R-64, tx=E('text',{x:cx+Math.cos(a)*rr,y:cy+Math.sin(a)*rr,fill:ACCENT,'font-size':23,'font-family':'Liberation Sans, sans-serif','font-weight':700,'text-anchor':'middle','dominant-baseline':'central'});
     tx.textContent=String(mark); svg.appendChild(tx);
   })();
-  // accent sweep 0 -> mark
+  // accent sweep 0 -> mark (full ring when mark is a whole minute)
   (function(){
-    const rr=R-30, a0=-Math.PI/2, a1=(mark/60)*2*Math.PI-Math.PI/2;
-    const big=(mark/60)>0.5?1:0;
-    svg.appendChild(E('path',{d:`M ${cx+Math.cos(a0)*rr} ${cy+Math.sin(a0)*rr} A ${rr} ${rr} 0 ${big} 1 ${cx+Math.cos(a1)*rr} ${cy+Math.sin(a1)*rr}`,
-      stroke:ACCENT,'stroke-width':6,fill:'none','stroke-linecap':'round'}));
+    const rr=R-30, a0=-Math.PI/2;
+    if(mark>=60){
+      svg.appendChild(E('circle',{cx,cy,r:rr,stroke:ACCENT,'stroke-width':6,fill:'none'}));
+    } else {
+      const a1=(mark/60)*2*Math.PI-Math.PI/2, big=(mark/60)>0.5?1:0;
+      svg.appendChild(E('path',{d:`M ${cx+Math.cos(a0)*rr} ${cy+Math.sin(a0)*rr} A ${rr} ${rr} 0 ${big} 1 ${cx+Math.cos(a1)*rr} ${cy+Math.sin(a1)*rr}`,
+        stroke:ACCENT,'stroke-width':6,fill:'none','stroke-linecap':'round'}));
+    }
     svg.appendChild(E('circle',{cx:cx+Math.cos(a0)*rr,cy:cy+Math.sin(a0)*rr,r:4.5,fill:ACCENT}));
   })();
   // hand to mark

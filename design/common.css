@@ -4,7 +4,7 @@ html,body{background:#0c1330;}
 
 .canvas{
   position:relative;width:1080px;height:1350px;overflow:hidden;
-  font-family:'Inter','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;
+  font-family:'Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
   --mono:'Liberation Mono','DejaVu Sans Mono',monospace;
 }
 /* ---- themes ---- */
@@ -50,8 +50,8 @@ html,body{background:#0c1330;}
 .eyebrow::before{content:"";width:46px;height:2px;background:var(--accent);display:inline-block;border-radius:2px;}
 
 .headline{
-  font-family:'Inter Display','Inter',sans-serif;font-weight:900;
-  line-height:.92;letter-spacing:-.04em;color:var(--ink);}
+  font-family:'Liberation Sans',Arial,sans-serif;font-weight:700;
+  line-height:.96;letter-spacing:-.03em;color:var(--ink);}
 .headline .hi{color:var(--hi);}
 
 .sub{font-size:32px;line-height:1.44;font-weight:400;color:var(--sub);letter-spacing:-.01em;}
