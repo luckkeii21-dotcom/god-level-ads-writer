@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .body{margin-top:58px;}
+  .p{margin-top:22px;max-width:830px;}
+  .chartwrap{margin-top:54px;display:flex;align-items:flex-end;gap:80px;padding:0 30px;}
+  .bar{display:flex;flex-direction:column;align-items:center;}
+  .bar .col{width:172px;border-radius:18px 18px 4px 4px;position:relative;}
+  .bar .cap{font-size:27px;font-weight:700;color:#15171d;margin-top:22px;letter-spacing:-.01em;text-align:center;}
+  .bar .cap span{display:block;font-size:22px;font-weight:500;color:rgba(21,23,29,.42);margin-top:4px;}
+  .bar .val{position:absolute;top:-48px;left:0;right:0;text-align:center;font-family:var(--mono);font-weight:700;font-size:30px;}
+  .gain .col{height:150px;background:linear-gradient(180deg,#cdd3e6,#b3bbd6);}
+  .gain .val{color:rgba(21,23,29,.42);}
+  .loss .col{height:300px;background:linear-gradient(180deg,#3a5cff,#2347ec);box-shadow:0 22px 44px rgba(35,71,236,.24);}
+  .loss .val{color:#2347ec;}
+  .baseline{height:2px;background:rgba(21,23,29,.16);margin-top:0;}
+</style></head>
+<body>
+<div class="canvas light">
+  <div class="frame flow">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>04</em> / 05</div>
+    </div>
+    <div class="body">
+      <div class="kick">Trigger 03 · Loss Aversion</div>
+      <h2 class="h2">Losing hurts about <span class="hi">twice</span> as much as winning feels good.</h2>
+      <p class="p">So don't only sell the upside. Name what quietly slips away while nothing changes — the deal, the hour, the customer who picked someone else. The cost of inaction moves people the dream never could.</p>
+      <div class="chartwrap">
+        <div class="bar gain"><div class="col"><div class="val">+1×</div></div><div class="cap">Joy of gaining<span>"Nice to have."</span></div></div>
+        <div class="bar loss"><div class="col"><div class="val">&minus;2×</div></div><div class="cap">Pain of losing<span>"I can't let that happen."</span></div></div>
+      </div>
+      <div class="baseline"></div>
+    </div>
+    <div class="foot">
+      <div class="dots"><i></i><i></i><i></i><i class="on"></i><i></i></div>
+      <div class="swipe">swipe <em>&rarr;</em></div>
+    </div>
+  </div>
+</div>
+</body></html>

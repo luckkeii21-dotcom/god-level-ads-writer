@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .body{margin-top:54px;}
+  .p{margin-top:22px;max-width:840px;}
+  .meterwrap{margin-top:50px;}
+  .mhead{display:flex;align-items:baseline;justify-content:space-between;}
+  .mhead .t{font-family:var(--mono);font-size:22px;letter-spacing:.1em;color:rgba(21,23,29,.5);text-transform:uppercase;}
+  .mhead .big{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:72px;letter-spacing:-.05em;color:#2347ec;line-height:.9;}
+  .meter{margin-top:18px;height:26px;border-radius:13px;background:rgba(21,23,29,.07);overflow:hidden;position:relative;}
+  .meter .fill{position:absolute;left:0;top:0;bottom:0;width:30%;border-radius:13px;background:linear-gradient(90deg,#3a5cff,#2347ec);}
+  .ticks{margin-top:10px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:18px;color:rgba(21,23,29,.4);}
+  .chips{margin-top:44px;display:flex;gap:16px;}
+  .chip{flex:1;background:#fffdf9;border:1px solid var(--line);border-radius:20px;padding:24px 24px;box-shadow:0 16px 36px rgba(40,36,22,.07);}
+  .chip .ic{width:50px;height:50px;border-radius:14px;background:rgba(35,71,236,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .chip .t{font-size:25px;font-weight:700;color:#15171d;letter-spacing:-.01em;line-height:1.2;}
+  .chip .d{font-size:20px;color:rgba(21,23,29,.5);margin-top:6px;line-height:1.3;}
+</style></head>
+<body>
+<div class="canvas light">
+  <div class="frame flow">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>04</em> / 05</div>
+    </div>
+    <div class="body">
+      <div class="kick">Spotlight · First impression</div>
+      <h2 class="h2">People judge your voice in about <span class="hi">7 seconds.</span></h2>
+      <p class="p">Before a single point lands, the listener has already decided how you sound — warm or rushed, sure or unsure. Win the opening and the whole call gets easier.</p>
+      <div class="meterwrap">
+        <div class="mhead"><div class="t">The window that decides it</div><div class="big">0:07</div></div>
+        <div class="meter"><div class="fill"></div></div>
+        <div class="ticks"><span>call connects</span><span>7s</span><span>the rest of the call</span></div>
+      </div>
+      <div class="chips">
+        <div class="chip"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div><div class="t">Smile first</div><div class="d">They can hear it in your tone.</div></div>
+        <div class="chip"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><div class="t">Name + reason</div><div class="d">Say who you are and why, fast.</div></div>
+        <div class="chip"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l3-7 4 14 3-7h5"/></svg></div><div class="t">Slower, lower</div><div class="d">Calm pace reads as confident.</div></div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="dots"><i></i><i></i><i></i><i class="on"></i><i></i></div>
+      <div class="swipe">swipe <em>&rarr;</em></div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .glow{position:absolute;top:118px;right:54px;width:380px;height:380px;z-index:1;
+    background:radial-gradient(circle,rgba(200,249,76,.26),rgba(200,249,76,0) 62%);}
+  .hero{position:absolute;top:120px;right:96px;width:308px;z-index:2;filter:drop-shadow(0 30px 44px rgba(6,14,52,.5));}
+  .burst{position:absolute;top:300px;right:402px;width:104px;height:104px;z-index:2;}
+  .copy{position:absolute;left:76px;right:76px;top:618px;z-index:3;}
+  .headline{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:108px;line-height:.92;letter-spacing:-.045em;color:#fff;}
+  .headline .hi{color:var(--accent);}
+  .sub{margin-top:38px;max-width:680px;}
+  .sub .arrow{color:var(--accent);font-weight:700;}
+</style></head>
+<body>
+<div class="canvas dark">
+  <div class="glow"></div>
+  <svg class="burst" viewBox="0 0 120 120" fill="none">
+    <g stroke="#c8f94c" stroke-width="7" stroke-linecap="round">
+      <line x1="96" y1="20" x2="70" y2="44"/><line x1="48" y1="8" x2="48" y2="40"/><line x1="10" y1="40" x2="40" y2="56"/>
+    </g>
+  </svg>
+  <svg class="hero" viewBox="0 0 308 300" fill="none">
+    <defs>
+      <linearGradient id="bub" x1="0" y1="0" x2=".4" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#e7ecff"/><stop offset="1" stop-color="#bcc7f0"/>
+      </linearGradient>
+    </defs>
+    <!-- back bubble -->
+    <g opacity=".5">
+      <rect x="120" y="36" width="168" height="116" rx="32" fill="#7e93e6"/>
+      <path d="M150 150 l-2 40 l40 -28 Z" fill="#7e93e6"/>
+    </g>
+    <!-- front bubble -->
+    <rect x="20" y="92" width="216" height="150" rx="38" fill="url(#bub)" stroke="#cfd9ff" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M70 240 l-6 46 l52 -34 Z" fill="url(#bub)"/>
+    <circle cx="92" cy="168" r="13" fill="#c8f94c"/>
+    <circle cx="128" cy="168" r="13" fill="#c8f94c" opacity=".7"/>
+    <circle cx="164" cy="168" r="13" fill="#c8f94c" opacity=".4"/>
+    <path d="M44 120 C 40 140 40 162 50 182" stroke="#ffffff" stroke-width="3.5" stroke-opacity=".6" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <div class="frame">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>01</em> / 05</div>
+    </div>
+  </div>
+  <div class="copy">
+    <div class="eyebrow">Communication</div>
+    <h1 class="headline">5 habits<br/>that quietly<br/><span class="hi">kill</span> deals.</h1>
+    <p class="sub">Most deals aren't lost on price. They're lost in how we talk. Five small habits that cost more than you'd think. <span class="arrow">&rarr;</span></p>
+  </div>
+  <div class="foot">
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <div class="swipe">swipe <em>&rarr;</em></div>
+  </div>
+</div>
+</body></html>

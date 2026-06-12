@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .glow{position:absolute;top:96px;right:34px;width:420px;height:420px;z-index:1;
+    background:radial-gradient(circle,rgba(200,249,76,.30),rgba(200,249,76,0) 62%);}
+  .hero{position:absolute;top:120px;right:96px;width:300px;height:380px;z-index:2;
+    filter:drop-shadow(0 30px 44px rgba(6,14,52,.5));}
+  .burst{position:absolute;top:150px;right:392px;width:118px;height:118px;z-index:2;}
+  .copy{position:absolute;left:76px;right:76px;top:606px;z-index:3;}
+  .headline{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:124px;line-height:.9;letter-spacing:-.045em;color:#fff;}
+  .key{position:relative;display:inline-block;}
+  .key .ring{width:124%;height:150%;}
+  .sub{margin-top:42px;max-width:760px;}
+  .sub .arrow{color:var(--accent);font-weight:700;}
+</style></head>
+<body>
+<div class="canvas dark">
+  <div class="glow"></div>
+  <svg class="burst" viewBox="0 0 120 120" fill="none">
+    <g stroke="#c8f94c" stroke-width="7" stroke-linecap="round">
+      <line x1="96" y1="20" x2="70" y2="44"/><line x1="48" y1="8" x2="48" y2="40"/><line x1="10" y1="40" x2="40" y2="56"/>
+    </g>
+  </svg>
+  <svg class="hero" viewBox="0 0 300 380" fill="none">
+    <defs>
+      <radialGradient id="glass" cx=".40" cy=".34" r=".78">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".48" stop-color="#e7ecff"/>
+        <stop offset="1" stop-color="#b9c4ee"/>
+      </radialGradient>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#aeb6c0"/><stop offset=".5" stop-color="#f2f5f8"/><stop offset="1" stop-color="#8d949f"/>
+      </linearGradient>
+    </defs>
+    <circle cx="150" cy="140" r="100" fill="#c8f94c" opacity=".16"/>
+    <circle cx="150" cy="140" r="100" fill="url(#glass)" stroke="#cfd9ff" stroke-opacity=".5" stroke-width="2"/>
+    <!-- filament -->
+    <path d="M112 168 C 112 132 124 116 132 104 M188 168 C 188 132 176 116 168 104" stroke="#d9ff7a" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M124 120 l13 22 l13 -30 l13 30 l13 -22" stroke="#c8f94c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"
+      filter="drop-shadow(0 0 8px rgba(200,249,76,.9))"/>
+    <!-- highlight -->
+    <path d="M104 96 C 96 124 98 150 112 172" stroke="#ffffff" stroke-width="4" stroke-opacity=".7" stroke-linecap="round" fill="none"/>
+    <!-- neck + base -->
+    <path d="M118 222 C 126 246 174 246 182 222 Z" fill="url(#metal)"/>
+    <rect x="120" y="240" width="60" height="58" rx="9" fill="url(#metal)"/>
+    <g stroke="#7c838d" stroke-width="2"><line x1="120" y1="256" x2="180" y2="256"/><line x1="120" y1="272" x2="180" y2="272"/><line x1="120" y1="288" x2="180" y2="288"/></g>
+    <path d="M134 298 L166 298 L158 322 L142 322 Z" fill="url(#metal)"/>
+  </svg>
+
+  <div class="frame">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>01</em> / 05</div>
+    </div>
+  </div>
+
+  <div class="copy">
+    <div class="eyebrow">Sales Psychology</div>
+    <h1 class="headline">The<br/>psychology<br/>of <span class="key">yes.<svg class="ring" viewBox="0 0 1000 340" preserveAspectRatio="none" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:visible;z-index:-1;"><path d="M500 26 A 470 150 0 1 1 499 26" stroke="#c8f94c" stroke-width="11" stroke-linecap="round" fill="none"/></svg></span></h1>
+    <p class="sub">The mental triggers behind every buying decision — and how the best communicators earn them. <span class="arrow">&rarr;</span></p>
+  </div>
+
+  <div class="foot">
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <div class="swipe">swipe <em>&rarr;</em></div>
+  </div>
+</div>
+</body></html>

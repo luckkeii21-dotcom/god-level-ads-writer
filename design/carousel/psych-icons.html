@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#0c1330;}
+  .canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+    font-family:'Inter','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;
+    background:radial-gradient(120% 90% at 72% 18%, #3a5cff 0%, #2347ec 34%, #1a36c4 62%, #122a9e 100%), #122a9e;}
+  .canvas::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(130% 100% at 50% 40%, rgba(0,0,0,0) 55%, rgba(8,16,54,.45) 100%);}
+  .frame{position:absolute;inset:0;padding:60px 60px 52px;z-index:3;display:flex;flex-direction:column;}
+  .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:27px;letter-spacing:-.02em;color:#fff;}
+  .logo .dot{width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.1);}
+  .logo span{color:#a8b8ff;}
+  .tag{font-family:'Liberation Mono',monospace;font-size:18px;letter-spacing:.22em;color:rgba(255,255,255,.55);text-transform:uppercase;}
+  .title{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:50px;letter-spacing:-.04em;color:#fff;margin-top:26px;line-height:1;}
+  .title .hi{color:#c8f94c;}
+  .sub{font-size:23px;color:rgba(255,255,255,.66);margin-top:14px;letter-spacing:-.01em;}
+  .grid{margin-top:34px;flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:22px;}
+  .tile{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:24px;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:26px 14px 22px;position:relative;}
+  .tile .num{position:absolute;top:14px;left:16px;font-family:'Liberation Mono',monospace;font-size:16px;color:rgba(255,255,255,.4);letter-spacing:.1em;}
+  .ico{height:150px;display:flex;align-items:center;justify-content:center;margin-top:6px;
+    filter:drop-shadow(0 18px 22px rgba(6,14,52,.5));}
+  .nm{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-top:14px;}
+  .ds{font-size:18px;color:#a8b8ff;text-align:center;margin-top:4px;line-height:1.25;padding:0 6px;}
+  .foot{margin-top:18px;font-family:'Liberation Mono',monospace;font-size:18px;color:rgba(255,255,255,.5);letter-spacing:.06em;text-align:center;}
+  .foot b{color:#c8f94c;}
+</style></head>
+<body>
+<div class="canvas">
+  <!-- shared gradient defs -->
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <linearGradient id="glassG" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#e7ecff"/><stop offset="1" stop-color="#bcc7f0"/></linearGradient>
+    <linearGradient id="metalG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9edf6"/><stop offset=".5" stop-color="#aab2c2"/><stop offset="1" stop-color="#7c8494"/></linearGradient>
+    <linearGradient id="blueG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b78ff"/><stop offset="1" stop-color="#2347ec"/></linearGradient>
+    <linearGradient id="limeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcff7e"/><stop offset="1" stop-color="#a6e62e"/></linearGradient>
+    <linearGradient id="iceG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dbe8ff"/><stop offset="1" stop-color="#88add6"/></linearGradient>
+    <linearGradient id="redG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7d7d"/><stop offset="1" stop-color="#e23b3b"/></linearGradient>
+  </defs></svg>
+
+  <div class="frame">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="tag">Sales Psychology · icon concepts</div>
+    </div>
+    <div class="title">8 ways to show <span class="hi">psychology</span></div>
+    <div class="sub">Pick a direction for the cover, then we refine it.</div>
+
+    <div class="grid">
+      <!-- 1 BRAIN -->
+      <div class="tile"><div class="num">01</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <circle cx="60" cy="56" r="40" fill="#c8f94c" opacity=".14"/>
+          <path d="M60 22 C44 22 36 32 37 44 C28 46 26 60 36 66 C36 80 50 88 60 82 C70 88 84 80 84 66 C94 60 92 46 83 44 C84 32 76 22 60 22 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".6" stroke-width="2"/>
+          <path d="M60 26 V84 M48 38 C44 44 50 50 46 56 M72 38 C76 44 70 50 74 56 M44 66 C50 66 52 72 58 72 M76 66 C70 66 68 72 62 72" stroke="#8fa6ff" stroke-opacity=".7" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <rect x="55" y="82" width="10" height="14" rx="4" fill="url(#metalG)"/>
+          <path d="M60 48 l3 6 6 1 -5 4 1 6 -5-3 -5 3 1-6 -5-4 6-1 z" fill="#c8f94c"/>
+        </svg></div>
+        <div class="nm">The Mind</div><div class="ds">A brain. Direct and unmistakable.</div></div>
+
+      <!-- 2 NEURON -->
+      <div class="tile"><div class="num">02</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <circle cx="54" cy="58" r="34" fill="#c8f94c" opacity=".12"/>
+          <g stroke="#bcc7f0" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9">
+            <path d="M54 58 L26 34"/><path d="M54 58 L24 66"/><path d="M54 58 L40 90"/><path d="M54 58 L70 26"/><path d="M54 58 L96 70"/>
+          </g>
+          <g fill="#8fa6ff"><circle cx="26" cy="34" r="6"/><circle cx="24" cy="66" r="6"/><circle cx="40" cy="90" r="6"/><circle cx="70" cy="26" r="6"/></g>
+          <circle cx="96" cy="70" r="9" fill="url(#limeG)"/>
+          <circle cx="54" cy="58" r="20" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".6" stroke-width="2"/>
+          <circle cx="54" cy="58" r="8" fill="#c8f94c"/>
+        </svg></div>
+        <div class="nm">Synapse</div><div class="ds">A neuron firing. The spark of a decision.</div></div>
+
+      <!-- 3 HEAD + BULB -->
+      <div class="tile"><div class="num">03</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <path d="M86 104 V84 C98 78 102 60 96 46 C88 26 64 18 46 28 C30 36 26 54 32 68 C34 74 30 76 26 80 C22 84 26 90 32 90 L40 90 V104 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".55" stroke-width="2"/>
+          <circle cx="62" cy="52" r="22" fill="#c8f94c" opacity=".18"/>
+          <circle cx="62" cy="50" r="16" fill="url(#glassG)" stroke="#d9ff7a" stroke-width="1.5"/>
+          <path d="M55 52 l5 8 9 -12" stroke="#a6e62e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <rect x="56" y="66" width="12" height="8" rx="3" fill="url(#metalG)"/>
+        </svg></div>
+        <div class="nm">Insight</div><div class="ds">A head with the idea lighting up inside.</div></div>
+
+      <!-- 4 SCALE -->
+      <div class="tile"><div class="num">04</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <rect x="56" y="26" width="8" height="64" rx="3" fill="url(#metalG)"/>
+          <circle cx="60" cy="26" r="7" fill="url(#limeG)"/>
+          <rect x="26" y="34" width="68" height="7" rx="3.5" fill="url(#metalG)"/>
+          <g stroke="#aab2c2" stroke-width="2" fill="none"><path d="M30 38 L22 60 M30 38 L38 60 M90 38 L82 60 M90 38 L98 60"/></g>
+          <path d="M18 60 a12 6 0 0 0 24 0 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".5" stroke-width="1.5"/>
+          <path d="M78 60 a12 6 0 0 0 24 0 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".5" stroke-width="1.5"/>
+          <rect x="40" y="90" width="40" height="9" rx="4" fill="url(#metalG)"/>
+        </svg></div>
+        <div class="nm">Judgment</div><div class="ds">Weighing a choice. Risk versus reward.</div></div>
+
+      <!-- 5 ICEBERG -->
+      <div class="tile"><div class="num">05</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <path d="M60 20 L82 50 L70 50 L60 38 L50 50 L38 50 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".6" stroke-width="1.5"/>
+          <line x1="14" y1="56" x2="106" y2="56" stroke="#c8f94c" stroke-width="2.5" stroke-dasharray="6 7" stroke-linecap="round"/>
+          <path d="M38 56 L82 56 L94 86 C84 100 36 100 26 86 Z" fill="url(#iceG)" opacity=".85" stroke="#9fc0e8" stroke-opacity=".4" stroke-width="1.5"/>
+        </svg></div>
+        <div class="nm">Below Surface</div><div class="ds">Conscious vs subconscious buying.</div></div>
+
+      <!-- 6 MAGNET -->
+      <div class="tile"><div class="num">06</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <g stroke="#c8f94c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8">
+            <path d="M92 30 a40 40 0 0 1 0 30"/><path d="M104 26 a52 52 0 0 1 0 38"/>
+          </g>
+          <path d="M34 86 V50 a26 26 0 0 1 52 0 V86 H66 V50 a6 6 0 0 0 -12 0 V86 Z" fill="url(#metalG)" stroke="#7c8494" stroke-width="1.5"/>
+          <rect x="34" y="86" width="20" height="14" rx="2" fill="url(#redG)"/>
+          <rect x="66" y="86" width="20" height="14" rx="2" fill="url(#metalG)"/>
+        </svg></div>
+        <div class="nm">Persuasion</div><div class="ds">A magnet. The pull that makes people say yes.</div></div>
+
+      <!-- 7 THOUGHT BUBBLE + CHECK -->
+      <div class="tile"><div class="num">07</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <circle cx="34" cy="92" r="6" fill="url(#glassG)"/><circle cx="46" cy="80" r="9" fill="url(#glassG)"/>
+          <path d="M40 30 H92 a14 14 0 0 1 14 14 V62 a14 14 0 0 1 -14 14 H64 L50 88 V76 H40 a14 14 0 0 1 -14 -14 V44 a14 14 0 0 1 14 -14 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".55" stroke-width="2"/>
+          <path d="M52 53 l9 9 16 -18" stroke="#a6e62e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg></div>
+        <div class="nm">The Yes</div><div class="ds">The moment a decision clicks into place.</div></div>
+
+      <!-- 8 PUZZLE -->
+      <div class="tile"><div class="num">08</div><div class="ico">
+        <svg width="140" height="140" viewBox="0 0 120 120">
+          <path d="M30 32 H52 a8 8 0 0 1 16 0 H88 V52 a8 8 0 0 1 0 16 V88 H68 a8 8 0 0 0 -16 0 H30 Z" fill="url(#glassG)" stroke="#cfd9ff" stroke-opacity=".5" stroke-width="2"/>
+          <path d="M88 52 a8 8 0 0 1 0 16 V88 H68 a8 8 0 0 1 0-16 a8 8 0 0 1 0-4 Z" fill="url(#limeG)"/>
+          <path d="M88 68 V88 H68 a8 8 0 0 0 0-16 a8 8 0 0 0 8-4 Z" fill="url(#limeG)"/>
+        </svg></div>
+        <div class="nm">What Clicks</div><div class="ds">Interlocking pieces. The psychology that fits.</div></div>
+    </div>
+
+    <div class="foot">Reply with a number (or two) and I will build the full cover around it &middot; <b>next: I also strip every dash and do a human copy pass</b></div>
+  </div>
+</div>
+</body></html>

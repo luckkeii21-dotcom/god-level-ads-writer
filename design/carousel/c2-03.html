@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .body{margin-top:54px;}
+  .p{margin-top:22px;max-width:840px;}
+  .flow{margin-top:54px;display:flex;align-items:stretch;gap:0;}
+  .fnode{flex:1;background:#fffdf9;border:1px solid var(--line);border-radius:24px;padding:30px 24px;text-align:center;
+    box-shadow:0 18px 40px rgba(40,36,22,.08);display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .fnode.key{border-color:rgba(35,71,236,.30);box-shadow:0 22px 46px rgba(35,71,236,.16);}
+  .fnode .ic{width:72px;height:72px;border-radius:20px;display:flex;align-items:center;justify-content:center;background:rgba(35,71,236,.08);}
+  .fnode .t{font-size:25px;font-weight:700;color:#15171d;line-height:1.18;letter-spacing:-.01em;}
+  .fnode .d{font-size:20px;color:rgba(21,23,29,.5);line-height:1.3;}
+  .arr{display:flex;align-items:center;padding:0 14px;color:#2347ec;}
+  .note{margin-top:40px;font-family:var(--mono);font-size:21px;letter-spacing:.04em;color:rgba(21,23,29,.5);}
+  .note b{color:#2347ec;}
+</style></head>
+<body>
+<div class="canvas light">
+  <div class="frame flow">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>03</em> / 05</div>
+    </div>
+    <div class="body">
+      <div class="kick">How it works · STIR / SHAKEN</div>
+      <h2 class="h2">So carriers built a way to <span class="hi">prove</span> a call is real.</h2>
+      <p class="p">AT&amp;T, Verizon and T-Mobile now stamp every call with a cryptographic signature. If the number has been spoofed, the stamp fails — and the call gets flagged before it ever rings.</p>
+      <div class="flow">
+        <div class="fnode">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+          <div class="t">You place<br/>the call</div>
+          <div class="d">From your verified business line</div>
+        </div>
+        <div class="arr"><svg width="34" height="22" viewBox="0 0 34 22" fill="none" stroke="#2347ec" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11h28M22 3l8 8-8 8"/></svg></div>
+        <div class="fnode key">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v5c0 5-3.5 9-8 11-4.5-2-8-6-8-11V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="t">The carrier<br/>signs it</div>
+          <div class="d">Cryptographic stamp — can't be faked</div>
+        </div>
+        <div class="arr"><svg width="34" height="22" viewBox="0 0 34 22" fill="none" stroke="#2347ec" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11h28M22 3l8 8-8 8"/></svg></div>
+        <div class="fnode">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg></div>
+          <div class="t">Verified on<br/>the screen</div>
+          <div class="d">Shown as a trusted, real caller</div>
+        </div>
+      </div>
+      <div class="note">Live across all major U.S. carriers since 2021 · <b>required by the FCC</b></div>
+    </div>
+    <div class="foot">
+      <div class="dots"><i></i><i></i><i class="on"></i><i></i><i></i></div>
+      <div class="swipe">swipe <em>&rarr;</em></div>
+    </div>
+  </div>
+</div>
+</body></html>

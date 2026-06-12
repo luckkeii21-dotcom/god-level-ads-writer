@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .body{margin-top:54px;}
+  .p{margin-top:22px;max-width:840px;}
+  .split{margin-top:30px;display:flex;align-items:center;gap:60px;}
+  .donut{position:relative;width:340px;height:340px;flex:0 0 auto;}
+  .donut .ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .donut .ctr .big{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:84px;letter-spacing:-.05em;color:#2347ec;line-height:.9;}
+  .donut .ctr .cap{font-family:var(--mono);font-size:20px;letter-spacing:.14em;color:rgba(21,23,29,.5);text-transform:uppercase;margin-top:4px;}
+  .legend{display:flex;flex-direction:column;gap:26px;}
+  .lg{display:flex;gap:18px;align-items:flex-start;}
+  .lg .sw{width:26px;height:26px;border-radius:8px;flex:0 0 auto;margin-top:6px;}
+  .lg .pct{font-size:38px;font-weight:800;color:#15171d;letter-spacing:-.02em;}
+  .lg .nm{font-size:25px;color:#4b4e57;margin-top:2px;}
+  .lg .nm b{color:#15171d;font-weight:700;}
+</style></head>
+<body>
+<div class="canvas light">
+  <div class="frame flow">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>03</em> / 05</div>
+    </div>
+    <div class="body">
+      <div class="kick">Spotlight · Talk-to-listen</div>
+      <h2 class="h2">Top closers talk <span class="hi">less</span> than half the time.</h2>
+      <p class="p">Analysis of tens of thousands of sales calls found a clear pattern: the highest performers spend most of the call listening. Talk more than your prospect and your odds drop.</p>
+      <div class="split">
+        <div class="donut">
+          <svg width="340" height="340" viewBox="0 0 340 340">
+            <circle cx="170" cy="170" r="120" fill="none" stroke="#cdd3e6" stroke-width="48"/>
+            <circle cx="170" cy="170" r="120" fill="none" stroke="#2347ec" stroke-width="48"
+              stroke-dasharray="324 754" stroke-dashoffset="0" transform="rotate(-90 170 170)" stroke-linecap="butt"/>
+          </svg>
+          <div class="ctr"><div class="big">43%</div><div class="cap">you talk</div></div>
+        </div>
+        <div class="legend">
+          <div class="lg"><span class="sw" style="background:#2347ec"></span><div><div class="pct">43%</div><div class="nm"><b>You talk</b> — pitch, answer, explain</div></div></div>
+          <div class="lg"><span class="sw" style="background:#cdd3e6"></span><div><div class="pct">57%</div><div class="nm"><b>They talk</b> — and you actually learn</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="dots"><i></i><i></i><i class="on"></i><i></i><i></i></div>
+      <div class="swipe">swipe <em>&rarr;</em></div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="common.css"/>
+<style>
+  .glow{position:absolute;top:120px;right:60px;width:360px;height:420px;z-index:1;
+    background:radial-gradient(circle,rgba(255,120,120,.22),rgba(255,120,120,0) 64%);}
+  .hero{position:absolute;top:108px;right:118px;width:262px;z-index:2;filter:drop-shadow(0 34px 46px rgba(6,14,52,.55));}
+  .burst{position:absolute;top:150px;right:392px;width:110px;height:110px;z-index:2;}
+  .copy{position:absolute;left:76px;right:76px;top:632px;z-index:3;}
+  .headline{font-family:'Inter Display','Inter',sans-serif;font-weight:900;font-size:82px;line-height:.98;letter-spacing:-.045em;color:#fff;}
+  .headline .hi{color:var(--accent);}
+  .sub{margin-top:36px;max-width:600px;}
+  .sub .arrow{color:var(--accent);font-weight:700;}
+</style></head>
+<body>
+<div class="canvas dark">
+  <div class="glow"></div>
+  <svg class="burst" viewBox="0 0 120 120" fill="none">
+    <g stroke="#c8f94c" stroke-width="7" stroke-linecap="round">
+      <line x1="96" y1="20" x2="70" y2="44"/><line x1="48" y1="8" x2="48" y2="40"/><line x1="10" y1="40" x2="40" y2="56"/>
+    </g>
+  </svg>
+  <svg class="hero" viewBox="0 0 262 392" fill="none">
+    <defs>
+      <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#e9edf6"/><stop offset=".5" stop-color="#aab2c2"/><stop offset="1" stop-color="#7c8494"/>
+      </linearGradient>
+    </defs>
+    <rect x="6" y="6" width="250" height="380" rx="46" fill="url(#frame)"/>
+    <rect x="16" y="16" width="230" height="360" rx="38" fill="#0e1330"/>
+    <rect x="98" y="30" width="66" height="11" rx="5.5" fill="#1c2348"/>
+    <text x="131" y="92" fill="#9aa3cb" font-family="Liberation Mono, monospace" font-size="15" letter-spacing="1.5" text-anchor="middle">INCOMING CALL</text>
+    <circle cx="131" cy="172" r="46" fill="rgba(255,90,90,.14)" stroke="rgba(255,120,120,.5)" stroke-width="1.5"/>
+    <path d="M131 152 v22 M131 184 v.4" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M119 156 a14 14 0 0 1 24 0 l14 24 a14 14 0 0 1 -12 21 h-28 a14 14 0 0 1 -12 -21 z" fill="none" stroke="#ff8a8a" stroke-width="3" stroke-linejoin="round"/>
+    <text x="131" y="258" fill="#ffffff" font-family="Inter, sans-serif" font-weight="800" font-size="34" letter-spacing="-1" text-anchor="middle">Unknown</text>
+    <rect x="63" y="280" width="136" height="40" rx="20" fill="rgba(255,90,90,.14)" stroke="rgba(255,120,120,.4)" stroke-width="1.5"/>
+    <text x="131" y="306" fill="#ff9a9a" font-family="Inter, sans-serif" font-weight="700" font-size="20" text-anchor="middle">⚠ Scam Likely</text>
+  </svg>
+
+  <div class="frame">
+    <div class="head">
+      <div class="logo"><span class="dot"></span><div><b>rizz</b><span>dial</span></div></div>
+      <div class="counter"><em>01</em> / 05</div>
+    </div>
+  </div>
+  <div class="copy">
+    <div class="eyebrow">The Future of Calling</div>
+    <h1 class="headline">Why nobody<br/>answers your<br/><span class="hi">number</span> anymore.</h1>
+    <p class="sub">Carriers are quietly rewriting the rules of the phone call. Here's what's changing — and how to stay answered. <span class="arrow">&rarr;</span></p>
+  </div>
+  <div class="foot">
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    <div class="swipe">swipe <em>&rarr;</em></div>
+  </div>
+</div>
+</body></html>
