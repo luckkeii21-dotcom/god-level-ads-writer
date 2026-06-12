@@ -23,7 +23,7 @@
   .av{width:50px;height:50px;border-radius:50%;flex:0 0 auto;
     background:url("../assets/james.jpeg") center 22%/cover;box-shadow:0 4px 10px rgba(2,16,80,.3);}
   .who{display:flex;flex-direction:column;}
-  .who .n{display:flex;align-items:center;gap:7px;font-weight:800;font-size:22px;color:#15171d;letter-spacing:-.01em;}
+  .who .n{display:flex;align-items:center;gap:7px;font-weight:800;font-size:22px;color:#15171d;letter-spacing:-.01em;white-space:nowrap;}
   .who .n .vf{width:18px;height:18px;border-radius:50%;background:#2347ec;display:flex;align-items:center;justify-content:center;}
   .who .n .rt{color:#f0a93f;font-weight:700;font-size:18px;}
   .who .t{font-size:15px;color:#9aa0ac;margin-top:1px;}
@@ -63,10 +63,21 @@
         <path d="M-94 132 C-94 82 -52 62 0 62 C52 62 94 82 94 132 Z" fill="currentColor"/>
         <path d="M-94 132 C-82 96 -48 80 0 80 C48 80 82 96 94 132" fill="#ffffff" opacity=".07"/>
       </g>
+      <!-- office chair (back behind person, armrests in front) -->
+      <g id="chairback">
+        <rect x="-112" y="-104" width="224" height="244" rx="52" fill="#525e8c"/>
+        <rect x="-112" y="-104" width="224" height="120" rx="52" fill="#ffffff" opacity=".08"/>
+        <rect x="-112" y="-104" width="224" height="244" rx="52" fill="none" stroke="#6a78ad" stroke-opacity=".5" stroke-width="2"/>
+      </g>
+      <g id="armrests">
+        <rect x="-128" y="64" width="46" height="22" rx="11" fill="#3b4570"/>
+        <rect x="82" y="64" width="46" height="22" rx="11" fill="#3b4570"/>
+      </g>
     </defs>
 
     <!-- ===== TOP — white man, glasses (James), olive shirt ===== -->
     <g transform="translate(540,324) scale(.82)">
+      <use href="#chairback"/>
       <use href="#torso" style="color:#6f7d52"/>
       <rect x="-18" y="38" width="36" height="34" rx="14" fill="url(#skA)"/><rect x="-18" y="52" width="36" height="20" fill="#e6ac88" opacity=".12"/>
       <ellipse cx="-52" cy="4" rx="11" ry="15" fill="url(#skA)"/><ellipse cx="52" cy="4" rx="11" ry="15" fill="url(#skA)"/>
@@ -85,6 +96,7 @@
 
     <!-- ===== RIGHT — white woman, blonde long hair ===== -->
     <g transform="translate(902,662) scale(.82)">
+      <use href="#chairback"/>
       <use href="#torso" style="color:#df8aa0"/>
       <path d="M-58 -8 C-60 -68 -30 -84 0 -84 C30 -84 60 -68 58 -8 C58 50 52 90 48 116 L30 116 C38 76 42 32 38 -10 C28 -44 -28 -44 -38 -10 C-42 32 -38 76 -30 116 L-48 116 C-52 90 -58 50 -58 -8 Z" fill="#dcc06f"/>
       <rect x="-17" y="38" width="34" height="32" rx="13" fill="url(#skB)"/><rect x="-17" y="50" width="34" height="20" fill="#e6ac88" opacity=".2"/>
@@ -102,6 +114,7 @@
 
     <!-- ===== BOTTOM — Black man, beard ===== -->
     <g transform="translate(540,944) scale(.82)">
+      <use href="#chairback"/>
       <use href="#torso" style="color:#56627d"/>
       <rect x="-18" y="38" width="36" height="32" rx="13" fill="url(#skC)"/>
       <ellipse cx="-51" cy="2" rx="10" ry="14" fill="url(#skC)"/><ellipse cx="51" cy="2" rx="10" ry="14" fill="url(#skC)"/>
@@ -117,6 +130,7 @@
 
     <!-- ===== LEFT — brunette woman, wavy hair ===== -->
     <g transform="translate(178,662) scale(.82)">
+      <use href="#chairback"/>
       <use href="#torso" style="color:#c2654a"/>
       <path d="M-56 -6 C-58 -66 -30 -82 0 -82 C30 -82 58 -66 56 -6 C56 46 50 82 46 110 L30 110 C36 74 40 30 36 -8 C26 -42 -26 -42 -36 -8 C-40 30 -36 74 -30 110 L-46 110 C-50 82 -56 46 -56 -6 Z" fill="#6e4d33"/>
       <rect x="-17" y="38" width="34" height="32" rx="13" fill="url(#skD)"/><rect x="-17" y="50" width="34" height="20" fill="#e6ac88" opacity=".2"/>
@@ -129,6 +143,12 @@
       <path d="M-14 34 Q0 44 14 34" stroke="#bd6058" stroke-width="5" fill="none" stroke-linecap="round"/>
       <path d="M-52 -4 C-56 -62 -26 -80 0 -80 C26 -80 56 -62 52 -4 C46 -32 30 -34 22 -22 C18 -38 -16 -40 -22 -24 C-30 -36 -44 -30 -52 -4 Z" fill="#6e4d33"/>
     </g>
+
+    <!-- armrests (in front of each person) -->
+    <use href="#armrests" transform="translate(540,324) scale(.82)"/>
+    <use href="#armrests" transform="translate(902,662) scale(.82)"/>
+    <use href="#armrests" transform="translate(540,944) scale(.82)"/>
+    <use href="#armrests" transform="translate(178,662) scale(.82)"/>
   </svg>
 
   <div class="card">
