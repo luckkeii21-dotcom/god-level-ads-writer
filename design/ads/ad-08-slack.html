@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#fff;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(120% 90% at 50% 4%, #20264a 0%, #161b35 46%, #0c1126 100%), #0c1126;}
+
+.cap{position:absolute;top:62px;left:66px;right:66px;z-index:4;color:#fff;}
+.cap .l1{font-size:47px;font-weight:800;letter-spacing:-.02em;line-height:1.08;}
+.cap .l1 u{text-decoration:none;color:#c8f94c;}
+.cap .l2{font-size:27px;font-weight:500;color:rgba(255,255,255,.7);margin-top:12px;letter-spacing:-.01em;}
+
+/* slack card */
+.slack{position:absolute;left:50%;transform:translateX(-50%);top:300px;width:952px;
+  background:#1a1d21;border-radius:30px;box-shadow:0 50px 100px rgba(0,0,0,.55);overflow:hidden;
+  border:1px solid #2a2d31;}
+.chan{display:flex;align-items:center;gap:12px;padding:30px 36px 24px;border-bottom:1px solid #2a2d31;}
+.chan .h{color:#fff;font-size:30px;font-weight:800;letter-spacing:-.01em;}
+.chan .h b{color:#7a7d82;font-weight:800;margin-right:4px;}
+.chan .meta{margin-left:auto;color:#7a7d82;font-size:21px;font-weight:600;}
+
+.msg{display:flex;gap:22px;padding:30px 36px 34px;}
+.bot{flex:0 0 auto;width:80px;height:80px;border-radius:18px;background:linear-gradient(135deg,#2347ec,#3a5cff);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:38px;}
+.body{flex:1;}
+.line1{display:flex;align-items:center;gap:12px;}
+.name{color:#fff;font-size:28px;font-weight:800;letter-spacing:-.01em;}
+.appbadge{background:#3a3d42;color:#cfd2d6;font-size:16px;font-weight:700;padding:3px 9px;border-radius:5px;letter-spacing:.02em;}
+.time{color:#7a7d82;font-size:20px;font-weight:600;}
+.intro{color:#d6d8db;font-size:25px;line-height:1.4;margin-top:12px;letter-spacing:-.005em;}
+.intro b{color:#fff;}
+
+.brief{margin-top:20px;border-left:4px solid #c8f94c;background:#202327;border-radius:0 14px 14px 0;padding:22px 26px;}
+.brow{display:flex;gap:14px;font-size:24px;line-height:1.5;color:#d6d8db;letter-spacing:-.005em;}
+.brow .k{color:#8a8d92;font-weight:700;min-width:172px;}
+.brow .v{color:#fff;font-weight:600;flex:1;}
+.brow .v em{color:#c8f94c;font-style:normal;font-weight:700;}
+
+.react{display:flex;gap:12px;margin-top:22px;}
+.pill{display:flex;align-items:center;gap:8px;background:#202327;border:1px solid #3a3d42;border-radius:999px;
+  padding:8px 16px;color:#cfd2d6;font-size:21px;font-weight:700;}
+.pill b{color:#7a7d82;font-weight:700;}
+
+.tag{position:absolute;bottom:46px;left:0;right:0;text-align:center;z-index:5;
+  font-size:30px;font-weight:800;color:#fff;letter-spacing:-.01em;padding:0 70px;line-height:1.25;}
+.tag u{text-decoration:none;color:#c8f94c;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="cap">
+      <div class="l1">Before your rep says hello, the AI has already <u>briefed the team.</u></div>
+      <div class="l2">This drops in our Slack 60 seconds after a lead books a call:</div>
+    </div>
+
+    <div class="slack">
+      <div class="chan">
+        <div class="h"><b>#</b>sales-prebriefs</div>
+        <div class="meta">🔒 Private · 25 members</div>
+      </div>
+      <div class="msg">
+        <div class="bot">A</div>
+        <div class="body">
+          <div class="line1"><span class="name">Aria</span><span class="appbadge">APP</span><span class="time">2:15 AM</span></div>
+          <div class="intro">New Build Session booked. I called the lead, pulled the context, here's your brief 👇 <b>Walk in knowing everything.</b></div>
+          <div class="brief">
+            <div class="brow"><span class="k">Business</span><span class="v">HVAC — Long Island, NY</span></div>
+            <div class="brow"><span class="k">Volume</span><span class="v">~40 leads / 12 booked a week</span></div>
+            <div class="brow"><span class="k">Stack</span><span class="v">HubSpot + 1 VA (manual callbacks)</span></div>
+            <div class="brow"><span class="k">The leak</span><span class="v"><em>VA only works 9–5 — half the leads come in after hours</em></span></div>
+            <div class="brow"><span class="k">Dream fix</span><span class="v">"Answer every lead in under 2 minutes"</span></div>
+          </div>
+          <div class="react">
+            <div class="pill">✅ <b>3</b></div>
+            <div class="pill">🔥 <b>5</b></div>
+            <div class="pill">👀 <b>2</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag">One AI. One memory. <u>The whole team already knows your business.</u></div>
+  </div>
+</body></html>

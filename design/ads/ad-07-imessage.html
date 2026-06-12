@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#fff;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:#0f246f;
+  background:radial-gradient(120% 90% at 50% 0%, #2347ec 0%, #1a36c4 45%, #0f246f 100%), #0f246f;}
+
+/* creator caption */
+.cap{position:absolute;top:60px;left:64px;right:64px;z-index:4;color:#fff;}
+.cap .l1{font-size:46px;font-weight:800;letter-spacing:-.02em;line-height:1.08;}
+.cap .l1 u{text-decoration:none;color:#c8f94c;}
+.cap .l2{font-size:27px;font-weight:500;color:rgba(255,255,255,.72);margin-top:12px;letter-spacing:-.01em;}
+
+/* phone */
+.phone{position:absolute;left:50%;transform:translateX(-50%);top:250px;width:660px;height:1046px;
+  background:#fff;border-radius:54px;box-shadow:0 50px 90px rgba(0,0,0,.42);overflow:hidden;}
+.nav{height:172px;background:#f6f6f6;border-bottom:1px solid #e3e3e3;position:relative;}
+.statusbar{position:absolute;top:18px;left:0;right:0;display:flex;justify-content:space-between;padding:0 40px;
+  font-size:23px;font-weight:700;color:#111;}
+.av{width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#2347ec,#3a5cff);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:30px;
+  position:absolute;top:50px;left:50%;transform:translateX(-50%);}
+.who{position:absolute;top:128px;left:0;right:0;text-align:center;font-size:24px;font-weight:600;color:#111;}
+.who span{font-size:18px;color:#8a8a8e;font-weight:500;margin-left:8px;}
+
+.thread{padding:22px 28px;display:flex;flex-direction:column;gap:13px;background:#fff;}
+.tstamp{text-align:center;font-size:18px;color:#8a8a8e;font-weight:600;margin:2px 0;}
+.tstamp b{color:#111;font-weight:700;}
+.b{max-width:76%;padding:16px 23px;font-size:25px;line-height:1.28;letter-spacing:-.01em;border-radius:25px;}
+.in{align-self:flex-start;background:#e9e9eb;color:#111;border-bottom-left-radius:8px;}
+.out{align-self:flex-end;background:#2347ec;color:#fff;border-bottom-right-radius:8px;}
+.meta{font-size:17px;color:#8a8a8e;font-weight:600;align-self:flex-end;margin-top:-6px;}
+
+.tag{position:absolute;bottom:30px;left:0;right:0;text-align:center;z-index:5;
+  font-size:23px;font-weight:700;color:rgba(255,255,255,.78);letter-spacing:-.01em;}
+.tag b{color:#fff;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="cap">
+      <div class="l1">A lead filled out your form at <u>2:14am.</u></div>
+      <div class="l2">You were asleep. Here's the conversation that happened anyway 👇</div>
+    </div>
+
+    <div class="phone">
+      <div class="nav">
+        <div class="statusbar"><span>2:15</span><span>5G&nbsp;&nbsp;100%</span></div>
+        <div class="av">R</div>
+        <div class="who">RizzDial<span>· replied in 9 sec</span></div>
+      </div>
+      <div class="thread">
+        <div class="tstamp">Today <b>2:14 AM</b></div>
+        <div class="b in">hey saw your site — do you do AC installs in long island?</div>
+        <div class="b out">Yes! We cover all of Long Island. Want me to grab a time for a tech this week?</div>
+        <div class="b in">wait it's 2am lol are you a real person??</div>
+        <div class="b out">Ha — I'm the AI rep, but I'll book you with a real human right now. Thursday 11am or Friday 9am?</div>
+        <div class="b in">thursday works</div>
+        <div class="b out">Done — booked Thursday 11am. Confirmation on its way.</div>
+        <div class="meta">Read · 2:15 AM</div>
+      </div>
+    </div>
+
+    <div class="tag">Your competitor called them back at <b>9am.</b> The deal was already gone.</div>
+  </div>
+</body></html>

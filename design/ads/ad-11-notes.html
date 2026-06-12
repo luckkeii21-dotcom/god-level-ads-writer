@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#fff;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(120% 90% at 50% 6%, #3a5cff 0%, #2347ec 42%, #16299c 100%), #16299c;}
+
+.cap{position:absolute;top:64px;left:66px;right:66px;z-index:4;color:#fff;}
+.cap .l1{font-size:50px;font-weight:800;letter-spacing:-.025em;line-height:1.05;}
+.cap .l1 u{text-decoration:none;color:#c8f94c;}
+
+/* notes app */
+.note{position:absolute;left:50%;transform:translateX(-50%) rotate(1deg);top:248px;width:880px;
+  background:#fffdf5;border-radius:26px;box-shadow:0 50px 90px rgba(0,0,0,.45);padding:46px 52px 52px;}
+.ntop{display:flex;justify-content:space-between;align-items:center;color:#c9a23a;font-size:23px;font-weight:700;}
+.ntop .done{color:#e8a91e;}
+.title{font-size:46px;font-weight:800;color:#1a1a1a;letter-spacing:-.02em;margin-top:22px;line-height:1.08;}
+.date{font-size:21px;color:#a8a8a8;font-weight:600;margin-top:12px;}
+.date b{color:#7a7a7a;}
+
+.list{margin-top:30px;display:flex;flex-direction:column;gap:23px;}
+.item{display:flex;gap:20px;align-items:flex-start;}
+.ck{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:3px solid #d8d3bf;margin-top:3px;}
+.ck.on{background:#e8a91e;border-color:#e8a91e;position:relative;}
+.ck.on::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:24px;font-weight:800;}
+.txt{font-size:31px;line-height:1.26;color:#26262a;letter-spacing:-.01em;}
+.txt.strike{color:#9a9a9a;}
+
+.tag{position:absolute;bottom:54px;left:0;right:0;text-align:center;z-index:5;
+  font-size:32px;font-weight:800;color:#fff;letter-spacing:-.015em;padding:0 70px;line-height:1.24;}
+.tag u{text-decoration:none;color:#c8f94c;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="cap">
+      <div class="l1">You're not behind because you're lazy.<br>You're doing <u>14 jobs an AI should do.</u></div>
+    </div>
+
+    <div class="note">
+      <div class="ntop"><span>‹ Notes</span><span class="done">Done</span></div>
+      <div class="title">today, instead of growing the business</div>
+      <div class="date"><b>Today</b> 9:48 PM · iCloud</div>
+      <div class="list">
+        <div class="item"><span class="ck on"></span><span class="txt strike">answered DMs until 9pm</span></div>
+        <div class="item"><span class="ck on"></span><span class="txt strike">wrote my own follow-up emails (again)</span></div>
+        <div class="item"><span class="ck on"></span><span class="txt strike">called Tuesday's lead… on Thursday</span></div>
+        <div class="item"><span class="ck on"></span><span class="txt strike">read 4 AI newsletters, installed 0 agents</span></div>
+        <div class="item"><span class="ck"></span><span class="txt">grow the business</span></div>
+      </div>
+    </div>
+
+    <div class="tag">Hand the busywork to an AI rep + a real team. <u>Start for $20.</u></div>
+  </div>
+</body></html>

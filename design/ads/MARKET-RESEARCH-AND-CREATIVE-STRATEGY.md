@@ -148,6 +148,36 @@ All six are 1080×1350 (4:5), brand blue `#2347ec` + lime `#c8f94c`, rendered PN
 
 ---
 
+## 8.5 — Batch 2: NATIVE creatives (recommended lead) 🏆
+
+Batch 1 (§8) is a clean *branded poster* set — headline + CTA on a gradient. It's on-brand and useful for retargeting/most-aware, but it reads as "an ad" in 0.5s, which is the #1 reason a thumb keeps moving. **Batch 2 disguises the ad as an artifact** — a screenshot of something real. This is the format that consistently wins cold DR on Meta in 2026 for founder-led brands, and it lets us use our *specific* assets (the Walmart story, the at-cost price list, Aria's real pre-brief, the HVAC example) instead of generic claims.
+
+> Direction: lead cold prospecting with Batch 2. Use Batch 1 for retargeting and as the "clean" fallback if an account flags a native piece. Test the two batches against each other — expect Batch 2 to win CTR and cost-per-trial on cold.
+
+| # | Format (the disguise) | Angle | File |
+|---|---|---|---|
+| 7 | **iMessage thread** — lead texts at 2:14am, AI books them | Speed-to-lead (cold) | `ad-07-imessage` |
+| 8 | **Slack pre-brief** — Aria briefs the 25-person team | The moat: unified memory + team | `ad-08-slack` |
+| 9 | **Agency invoice** — $21K retail, "$2,300 at cost" stamp | At-cost value | `ad-09-invoice` |
+| 10 | **Founder tweet** — the Walmart/Charmin $30K story | Founder story / origin | `ad-10-tweet` |
+| 11 | **iPhone Notes list** — "today, instead of growing the business" | Identity / the bottleneck | `ad-11-notes` |
+
+**Why these beat the posters:** no lime CTA button screaming "ad," concrete specifics (2:14am, Long Island HVAC, $30K, 12 seconds, $4,000→$400), and each is a *proof artifact* — the product/team literally doing the thing. Per the offer doc's own note: *"Record Aria pre-brief calls as ad creative — turn the funnel into the proof point."* These are the static version of that instinct.
+
+### Ready-to-paste Meta copy — Batch 2
+
+**#7 iMessage** · *Primary:* A lead found you at 2am. You were asleep — so your AI rep answered in 9 seconds, sounded human, and booked them before your competitor's office even opened. Speed-to-lead isn't a nice-to-have; the first responder wins 35–50% of deals. Start for $20. · *Headline:* Your leads don't wait until 9am · *CTA:* Sign Up
+
+**#8 Slack** · *Primary:* Most "AI tools" forget the conversation the second it ends. Ours don't. One shared memory across voice, chat, and sales means that 60 seconds after a lead books, the whole team already knows their business. That's the difference between a chatbot and an AI-first company. · *Headline:* The AI briefs your team before the call · *CTA:* Learn More
+
+**#9 Invoice** · *Primary:* Agencies charge $4,000 for a GHL build. We pay our team $400 — and that's exactly what you pay. No markup, ever. $21K of agency work runs ~$2,300 at cost inside the $997 membership. Most members pull $3,000 of build value in month one. · *Headline:* Same builds. Zero markup. · *CTA:* Apply Now
+
+**#10 Tweet** · *Primary:* He lost a $30K deal because he called the lead two days late. They'd already signed with whoever answered in 12 seconds. So he built RizzDial — an AI that calls every new lead in 60 seconds. Now it's open to 50 founders. · *Headline:* The post that started RizzDial · *CTA:* Sign Up
+
+**#11 Notes** · *Primary:* You answer DMs at 9pm. You write your own follow-ups. You called Tuesday's lead on Thursday. You're not lazy — you're doing 14 jobs an AI should be doing. Hand the busywork to an AI rep + a real 25-person team for the price of one tool. Start for $20. · *Headline:* Stop running your business at 9pm · *CTA:* Sign Up
+
+---
+
 ## 9. Recommended test structure (for Lucky)
 
 - **Stage 1 — angle test (cold):** one ABO/Advantage+ campaign, all six creatives, broad audience, lead/trial objective. Let Meta find the hook. Judge on **cost per $20 trial** (and CPL on the lead form), not CTR alone.

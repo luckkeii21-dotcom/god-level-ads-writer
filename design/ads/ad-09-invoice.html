@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#fff;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(120% 90% at 50% 4%, #2347ec 0%, #1a36c4 48%, #0f246f 100%), #0f246f;}
+
+.cap{position:absolute;top:58px;left:64px;right:64px;z-index:4;color:#fff;}
+.cap .l1{font-size:48px;font-weight:800;letter-spacing:-.02em;line-height:1.06;}
+.cap .l1 u{text-decoration:none;color:#c8f94c;}
+.cap .l2{font-size:27px;font-weight:500;color:rgba(255,255,255,.72);margin-top:10px;}
+
+/* paper */
+.paper{position:absolute;left:50%;transform:translateX(-50%) rotate(-1.4deg);top:262px;width:900px;
+  background:#fdfdfb;border-radius:14px;box-shadow:0 50px 90px rgba(0,0,0,.45);padding:54px 60px 44px;}
+.ihead{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #1a1c22;padding-bottom:26px;}
+.firm{font-size:32px;font-weight:800;color:#1a1c22;letter-spacing:-.02em;}
+.firm span{display:block;font-size:19px;font-weight:600;color:#9a9a9a;margin-top:4px;letter-spacing:.02em;}
+.inv{text-align:right;}
+.inv .t{font-size:44px;font-weight:800;color:#d8d8d2;letter-spacing:.06em;}
+.inv .n{font-size:19px;color:#9a9a9a;font-weight:600;margin-top:4px;}
+
+.tbl{margin-top:30px;}
+.trow{display:flex;justify-content:space-between;align-items:baseline;padding:19px 0;border-bottom:1px solid #ececdf;}
+.trow .d{font-size:27px;font-weight:600;color:#26282e;letter-spacing:-.01em;}
+.trow .p{font-size:28px;font-weight:700;color:#26282e;font-variant-numeric:tabular-nums;}
+.tot{display:flex;justify-content:space-between;align-items:baseline;padding-top:26px;}
+.tot .d{font-size:30px;font-weight:800;color:#1a1c22;}
+.tot .p{font-size:46px;font-weight:800;color:#1a1c22;font-variant-numeric:tabular-nums;}
+
+/* stamp */
+.stamp{position:absolute;right:54px;top:402px;transform:rotate(-13deg);z-index:6;
+  border:6px solid #1f7a1f;border-radius:14px;padding:14px 22px 10px;background:rgba(255,255,255,.5);}
+.stamp .s1{font-size:24px;font-weight:800;letter-spacing:.10em;color:#1f7a1f;text-align:center;}
+.stamp .s2{font-size:62px;font-weight:900;letter-spacing:-.02em;color:#1f7a1f;line-height:.9;}
+.stamp .s3{font-size:21px;font-weight:800;letter-spacing:.14em;color:#1f7a1f;text-align:center;}
+
+.tag{position:absolute;bottom:50px;left:0;right:0;text-align:center;z-index:5;
+  font-size:31px;font-weight:800;color:#fff;letter-spacing:-.01em;padding:0 64px;line-height:1.25;}
+.tag u{text-decoration:none;color:#c8f94c;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="cap">
+      <div class="l1">Same builds. <u>Zero markup.</u></div>
+      <div class="l2">What an agency invoices you vs. what a member actually pays:</div>
+    </div>
+
+    <div class="paper">
+      <div class="ihead">
+        <div class="firm">Generic AI Agency, LLC<span>RETAIL RATE CARD</span></div>
+        <div class="inv"><div class="t">INVOICE</div><div class="n">#2026-0417</div></div>
+      </div>
+      <div class="tbl">
+        <div class="trow"><span class="d">GHL build + automations</span><span class="p">$4,000</span></div>
+        <div class="trow"><span class="d">AI voice agent</span><span class="p">$5,000</span></div>
+        <div class="trow"><span class="d">Funnel + landing page</span><span class="p">$7,500</span></div>
+        <div class="trow"><span class="d">Ad campaign setup</span><span class="p">$4,500</span></div>
+        <div class="tot"><span class="d">Agency total</span><span class="p">$21,000</span></div>
+      </div>
+    </div>
+
+    <div class="stamp">
+      <div class="s1">MEMBERS PAY</div>
+      <div class="s2">$2,300</div>
+      <div class="s3">AT&nbsp;COST</div>
+    </div>
+
+    <div class="tag">A 25-person team for <u>$997/mo</u>. The math agencies don't want you doing.</div>
+  </div>
+</body></html>
