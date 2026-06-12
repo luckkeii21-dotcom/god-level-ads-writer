@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#1a36c4;}
+  .canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+    font-family:'Inter','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;
+    background:radial-gradient(125% 100% at 50% 30%, #2f53f0 0%, #2347ec 38%, #1a35bd 70%, #142a98 100%), #142a98;}
+  .canvas::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(135% 100% at 50% 44%, rgba(0,0,0,0) 56%, rgba(8,16,54,.4) 100%);}
+  .wm{position:absolute;top:54px;left:0;right:0;text-align:center;z-index:5;
+    font-weight:800;font-size:44px;letter-spacing:-.03em;color:#fff;}
+  .wm span{color:#a8b8ff;}
+  .pill{position:absolute;top:124px;left:50%;transform:translateX(-50%);z-index:5;
+    background:#fff;color:#1a35bd;font-weight:700;font-size:23px;letter-spacing:-.01em;
+    padding:11px 26px;border-radius:999px;box-shadow:0 10px 24px rgba(8,16,54,.3);}
+  .scene{position:absolute;inset:0;z-index:2;}
+  .card{position:absolute;left:300px;top:452px;width:480px;height:344px;z-index:3;
+    background:linear-gradient(180deg,#ffffff,#f4f6fb);border-radius:30px;
+    box-shadow:0 40px 70px rgba(8,16,54,.4);padding:26px 30px;display:flex;flex-direction:column;}
+  .chead{display:flex;align-items:center;gap:13px;}
+  .av{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#2347ec,#3a5cff);flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;}
+  .who{display:flex;flex-direction:column;}
+  .who .n{display:flex;align-items:center;gap:7px;font-weight:800;font-size:23px;color:#15171d;letter-spacing:-.01em;}
+  .who .n .vf{width:18px;height:18px;border-radius:50%;background:#2347ec;display:flex;align-items:center;justify-content:center;}
+  .who .n .rt{color:#f0a93f;font-weight:700;font-size:20px;margin-left:2px;}
+  .who .t{font-size:17px;color:#9aa0ac;margin-top:1px;}
+  .addic{margin-left:auto;color:#2347ec;}
+  .ctext{flex:1;display:flex;align-items:center;justify-content:center;}
+  .ctext h2{font-family:'Liberation Serif','DejaVu Serif',Georgia,serif;font-weight:700;
+    font-size:52px;color:#16223f;letter-spacing:-.01em;text-align:center;line-height:1.04;}
+  .eng{display:flex;align-items:center;gap:28px;border-top:1px solid #eef0f5;padding-top:18px;}
+  .eng .it{display:flex;align-items:center;gap:9px;color:#8a90a0;font-weight:600;font-size:20px;}
+  .eng .bm{margin-left:auto;}
+  .tagline{position:absolute;left:60px;right:60px;bottom:150px;z-index:5;text-align:center;
+    font-weight:500;font-size:42px;line-height:1.28;color:#dbe3ff;letter-spacing:-.01em;}
+  .tagline b{color:#fff;font-weight:800;}
+  .url{position:absolute;bottom:74px;left:0;right:0;text-align:center;z-index:5;
+    font-family:'Liberation Mono',monospace;font-size:22px;letter-spacing:.18em;color:rgba(255,255,255,.55);}
+</style></head>
+<body>
+<div class="canvas">
+  <div class="wm">rizz<span>dial</span></div>
+  <div class="pill">Listening beats talking</div>
+  <svg class="scene" viewBox="0 0 1080 1350" fill="none">
+    <defs>
+      <g id="person">
+        <ellipse cx="-36" cy="-8" rx="18" ry="13" fill="#e7c4a0"/>
+        <ellipse cx="36" cy="-8" rx="18" ry="13" fill="#e7c4a0"/>
+        <line x1="-34" y1="-12" x2="-70" y2="-118" stroke="currentColor" stroke-width="34" stroke-linecap="round"/>
+        <line x1="34" y1="-12" x2="70" y2="-118" stroke="currentColor" stroke-width="34" stroke-linecap="round"/>
+        <ellipse cx="0" cy="-150" rx="104" ry="58" fill="currentColor"/>
+        <ellipse cx="0" cy="-212" rx="47" ry="51" fill="#2a2f3a"/>
+      </g>
+    </defs>
+    <use href="#person" transform="translate(540,452)" style="color:#b07a52"/>
+    <use href="#person" transform="translate(540,796) rotate(180)" style="color:#3f7d8c"/>
+    <use href="#person" transform="translate(300,624) rotate(-90)" style="color:#c75d6a"/>
+    <use href="#person" transform="translate(780,624) rotate(90)" style="color:#4a5a86"/>
+  </svg>
+  <div class="card">
+    <div class="chead">
+      <div class="av">D</div>
+      <div class="who">
+        <div class="n">deepa.rao <span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span class="rt">★ 4.5</span></div>
+        <div class="t">2 minutes ago</div>
+      </div>
+      <div class="addic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2347ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M18 8v6M21 11h-6"/></svg></div>
+    </div>
+    <div class="ctext"><h2>Read<br/>the Room</h2></div>
+    <div class="eng">
+      <div class="it"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a90a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v10M7 10l4-7a2 2 0 013 2l-1 5h5a2 2 0 012 2.3l-1.2 6A2 2 0 0119.8 20H7"/></svg>2.4k</div>
+      <div class="it"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a90a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-5A8 8 0 1121 12z"/></svg>186</div>
+      <div class="it"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a90a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>31k</div>
+      <div class="it"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a90a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div>
+      <div class="it bm"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a90a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 011 1v17l-7-4-7 4V4a1 1 0 011-1z"/></svg></div>
+    </div>
+  </div>
+  <div class="tagline">Where <b>top closers</b> don't talk more,<br/>they <b>listen</b> better.</div>
+  <div class="url">rizzdial.com</div>
+</div>
+</body></html>
