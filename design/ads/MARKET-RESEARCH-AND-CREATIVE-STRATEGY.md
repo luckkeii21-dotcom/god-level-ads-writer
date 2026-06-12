@@ -148,7 +148,28 @@ All six are 1080×1350 (4:5), brand blue `#2347ec` + lime `#c8f94c`, rendered PN
 
 ---
 
-## 8.5 — Batch 2: NATIVE creatives (recommended lead) 🏆
+## 8.0 — FINAL SET (v3) — the cohesive system 🏆 USE THIS
+
+Batches 1–2 below are kept for history. The **shipping set is `ad-12` → `ad-16`** — one rigorous design system: a single 88px spine every element aligns to, a fixed type scale (21 mono / 30 sub / 72 display), a consistent masthead (logo left · mono eyebrow right), the same headline pattern (ink line + one blue accent line), and the same elevated white "proof card" on warm paper. Five angles, five distinct proof objects, one look.
+
+| # | Proof object | Angle | Awareness | File |
+|---|---|---|---|---|
+| 12 | Chat conversation | Speed-to-lead (2am lead, booked in 9s) | Problem-aware | `ad-12-speed` |
+| 13 | Agency rate-card table | At-cost value ($4,000 → $400) | Product-aware | `ad-13-team` |
+| 14 | Aria team brief | The moat (unified memory + team) | Solution-aware | `ad-14-moat` |
+| 15 | Founder pull-quote | Origin story (Walmart / $30K / 12s) | Unaware/story | `ad-15-story` |
+| 16 | Checklist | The bottleneck identity | Unaware | `ad-16-bottleneck` |
+
+**Meta copy (v3 set):**
+- **#12 Speed** · *Primary:* A lead found you at 2am. You were asleep — so your AI rep answered in 9 seconds, sounded human, and booked them before your competitor opened. The first responder wins 35–50% of deals. Start for $20. · *Headline:* Your leads don't wait until 9am · *CTA:* Sign Up
+- **#13 At-cost** · *Primary:* Agencies bill $4,000 for a GHL build. We pay our team $400 — and that's what you pay. No markup, ever. A 25-person AI team at cost, inside the $997 membership. · *Headline:* Same builds. Zero markup. · *CTA:* Apply Now
+- **#14 Moat** · *Primary:* Most "AI tools" forget the conversation the second it ends. Ours share one memory — so 60 seconds after a lead books, the whole team already knows their business. That's the difference between a chatbot and an AI-first company. · *Headline:* Your team walks in already knowing · *CTA:* Learn More
+- **#15 Story** · *Primary:* He lost a $30K deal because he called the lead two days late — they'd signed with whoever answered in 12 seconds. So he built RizzDial: an AI that calls every lead in 60. Now it's open to 50 founders. · *Headline:* The deal that built RizzDial · *CTA:* Sign Up
+- **#16 Bottleneck** · *Primary:* You answer DMs at 9pm. You write your own follow-ups. You called Tuesday's lead on Thursday. You're not lazy — you're doing 14 jobs an AI should do. Hand the busywork to an AI rep + a real 25-person team. Start for $20. · *Headline:* Stop running your business at 9pm · *CTA:* Sign Up
+
+---
+
+## 8.5 — Batch 2: NATIVE creatives (superseded by §8.0)
 
 Batch 1 (§8) is a clean *branded poster* set — headline + CTA on a gradient. It's on-brand and useful for retargeting/most-aware, but it reads as "an ad" in 0.5s, which is the #1 reason a thumb keeps moving. **Batch 2 disguises the ad as an artifact** — a screenshot of something real. This is the format that consistently wins cold DR on Meta in 2026 for founder-led brands, and it lets us use our *specific* assets (the Walmart story, the at-cost price list, Aria's real pre-brief, the HVAC example) instead of generic claims.
 

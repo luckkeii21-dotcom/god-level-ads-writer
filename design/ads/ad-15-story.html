@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#eceae3;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;background:#eceae3;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  --ink:#15171c; --muted:#71757e; --blue:#2347ec; --line:rgba(20,22,28,.10);}
+.canvas::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(150% 80% at 50% -10%, rgba(255,255,255,.6), rgba(255,255,255,0) 46%);}
+.frame{position:absolute;inset:0;padding:88px;z-index:2;display:flex;flex-direction:column;}
+.mast{display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:13px;font-size:27px;font-weight:800;letter-spacing:-.02em;color:var(--ink);}
+.brand .dot{width:16px;height:16px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(35,71,236,.12);}
+.brand .t{opacity:.4;}
+.eyebrow{font-family:'Liberation Mono',monospace;font-size:21px;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;}
+.lead{margin-top:74px;}
+.h{font-size:72px;font-weight:800;line-height:1.04;letter-spacing:-.035em;color:var(--ink);max-width:904px;}
+.h .accent{color:var(--blue);}
+.sub{margin-top:24px;font-size:30px;line-height:1.36;font-weight:500;color:var(--muted);letter-spacing:-.01em;max-width:820px;}
+.card{margin-top:auto;background:#fff;border-radius:32px;border:1px solid var(--line);
+  box-shadow:0 30px 60px rgba(20,22,28,.12);padding:44px 48px 46px;position:relative;}
+.qmark{font-family:Georgia,serif;font-size:150px;line-height:.7;color:var(--blue);opacity:.16;height:70px;}
+.quote{font-size:35px;line-height:1.4;font-weight:600;color:var(--ink);letter-spacing:-.015em;margin-top:6px;}
+.quote b{color:var(--blue);font-weight:700;}
+.attr{display:flex;align-items:center;gap:18px;margin-top:36px;padding-top:30px;border-top:1px solid var(--line);}
+.pfp{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#2347ec,#3a5cff);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:30px;}
+.an{font-size:27px;font-weight:800;color:var(--ink);letter-spacing:-.01em;}
+.an span{display:block;font-size:21px;font-weight:600;color:var(--muted);margin-top:2px;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="frame">
+      <div class="mast">
+        <div class="brand"><span class="dot"></span><span><b>everything</b><span class="t">ai</span></span></div>
+        <div class="eyebrow">Why&nbsp;we&nbsp;built&nbsp;it</div>
+      </div>
+      <div class="lead">
+        <div class="h">I lost a $30K deal<br><span class="accent">over a slow callback.</span></div>
+        <div class="sub">They signed with whoever answered in 12 seconds. So I built an AI that answers in 60.</div>
+      </div>
+      <div class="card">
+        <div class="qmark">&ldquo;</div>
+        <div class="quote">I was in Walmart holding a 12-pack of Charmin when I lost a <b>$30,000 deal</b>. I'd called the lead back two days late — they'd already signed with someone who picked up in <b>12 seconds</b>.</div>
+        <div class="attr">
+          <div class="pfp">JH</div>
+          <div class="an">James Hill<span>Founder · RizzDial</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>

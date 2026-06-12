@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#eceae3;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;background:#eceae3;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  --ink:#15171c; --muted:#71757e; --blue:#2347ec; --line:rgba(20,22,28,.10);}
+.canvas::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(150% 80% at 50% -10%, rgba(255,255,255,.6), rgba(255,255,255,0) 46%);}
+.frame{position:absolute;inset:0;padding:88px;z-index:2;display:flex;flex-direction:column;}
+.mast{display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:13px;font-size:27px;font-weight:800;letter-spacing:-.02em;color:var(--ink);}
+.brand .dot{width:16px;height:16px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(35,71,236,.12);}
+.brand .t{opacity:.4;}
+.eyebrow{font-family:'Liberation Mono',monospace;font-size:21px;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;}
+.lead{margin-top:74px;}
+.h{font-size:72px;font-weight:800;line-height:1.04;letter-spacing:-.035em;color:var(--ink);max-width:904px;}
+.h .accent{color:var(--blue);}
+.sub{margin-top:24px;font-size:30px;line-height:1.36;font-weight:500;color:var(--muted);letter-spacing:-.01em;max-width:800px;}
+.card{margin-top:auto;background:#fff;border-radius:32px;border:1px solid var(--line);
+  box-shadow:0 30px 60px rgba(20,22,28,.12);padding:14px 46px 22px;}
+/* rate card table */
+.tr{display:grid;grid-template-columns:1fr 200px 200px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);}
+.tr.hd{padding:26px 0 18px;}
+.tr.hd .c{font-family:'Liberation Mono',monospace;font-size:19px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;text-align:right;}
+.tr.hd .c.l{text-align:left;}
+.tr .d{font-size:27px;font-weight:600;color:var(--ink);letter-spacing:-.01em;}
+.tr .a{font-size:27px;font-weight:600;color:var(--muted);text-align:right;text-decoration:line-through;text-decoration-color:rgba(20,22,28,.28);font-variant-numeric:tabular-nums;}
+.tr .m{font-size:29px;font-weight:800;color:var(--blue);text-align:right;font-variant-numeric:tabular-nums;}
+.tr.total{border-bottom:none;border-top:2px solid rgba(20,22,28,.14);padding:28px 0 20px;}
+.tr.total .d{font-weight:800;font-size:28px;}
+.tr.total .a{font-size:28px;}
+.tr.total .m{font-size:34px;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="frame">
+      <div class="mast">
+        <div class="brand"><span class="dot"></span><span><b>everything</b><span class="t">ai</span></span></div>
+        <div class="eyebrow">At&nbsp;cost</div>
+      </div>
+      <div class="lead">
+        <div class="h">Agencies charge $4,000.<br><span class="accent">Members pay $400.</span></div>
+        <div class="sub">Same build. Same 25-person team. Zero markup — that's what the $997 membership means.</div>
+      </div>
+      <div class="card">
+        <div class="tr hd"><span class="c l">One month of builds</span><span class="c">Agency</span><span class="c">Member</span></div>
+        <div class="tr"><span class="d">GHL build + automations</span><span class="a">$4,000</span><span class="m">$400</span></div>
+        <div class="tr"><span class="d">AI voice agent</span><span class="a">$5,000</span><span class="m">$600</span></div>
+        <div class="tr"><span class="d">Funnel + landing page</span><span class="a">$7,500</span><span class="m">$800</span></div>
+        <div class="tr"><span class="d">Ad campaign setup</span><span class="a">$4,500</span><span class="m">$500</span></div>
+        <div class="tr total"><span class="d">Total</span><span class="a">$21,000</span><span class="m">$2,300</span></div>
+      </div>
+    </div>
+  </div>
+</body></html>

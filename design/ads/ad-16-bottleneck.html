@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#eceae3;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;background:#eceae3;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  --ink:#15171c; --muted:#71757e; --blue:#2347ec; --line:rgba(20,22,28,.10);}
+.canvas::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(150% 80% at 50% -10%, rgba(255,255,255,.6), rgba(255,255,255,0) 46%);}
+.frame{position:absolute;inset:0;padding:88px;z-index:2;display:flex;flex-direction:column;}
+.mast{display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:13px;font-size:27px;font-weight:800;letter-spacing:-.02em;color:var(--ink);}
+.brand .dot{width:16px;height:16px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(35,71,236,.12);}
+.brand .t{opacity:.4;}
+.eyebrow{font-family:'Liberation Mono',monospace;font-size:21px;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;}
+.lead{margin-top:74px;}
+.h{font-size:72px;font-weight:800;line-height:1.04;letter-spacing:-.035em;color:var(--ink);max-width:904px;}
+.h .accent{color:var(--blue);}
+.sub{margin-top:24px;font-size:30px;line-height:1.36;font-weight:500;color:var(--muted);letter-spacing:-.01em;max-width:800px;}
+.card{margin-top:auto;background:#fff;border-radius:32px;border:1px solid var(--line);
+  box-shadow:0 30px 60px rgba(20,22,28,.12);padding:18px 46px 26px;}
+.task{display:flex;align-items:center;gap:24px;padding:25px 0;border-bottom:1px solid var(--line);}
+.task:last-child{border-bottom:none;}
+.ck{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:2.5px solid #cfd0cb;}
+.ck.on{background:var(--blue);border-color:var(--blue);position:relative;}
+.ck.on::after{content:"";position:absolute;left:13px;top:7px;width:11px;height:20px;
+  border:solid #fff;border-width:0 3.5px 3.5px 0;transform:rotate(42deg);}
+.tx{font-size:30px;font-weight:600;color:var(--ink);letter-spacing:-.01em;}
+.tx.done{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(20,22,28,.26);}
+.tx.goal{color:var(--blue);font-weight:800;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="frame">
+      <div class="mast">
+        <div class="brand"><span class="dot"></span><span><b>everything</b><span class="t">ai</span></span></div>
+        <div class="eyebrow">The&nbsp;bottleneck</div>
+      </div>
+      <div class="lead">
+        <div class="h">You're not behind<br><span class="accent">because you're lazy.</span></div>
+        <div class="sub">You're doing 14 jobs an AI should be doing. Hand the busywork to a rep and a real team.</div>
+      </div>
+      <div class="card">
+        <div class="task"><span class="ck on"></span><span class="tx done">Answered DMs until 9pm</span></div>
+        <div class="task"><span class="ck on"></span><span class="tx done">Wrote my own follow-up emails again</span></div>
+        <div class="task"><span class="ck on"></span><span class="tx done">Called Tuesday's lead on Thursday</span></div>
+        <div class="task"><span class="ck on"></span><span class="tx done">Read 4 AI newsletters, installed 0 agents</span></div>
+        <div class="task"><span class="ck"></span><span class="tx goal">Grow the business</span></div>
+      </div>
+    </div>
+  </div>
+</body></html>
