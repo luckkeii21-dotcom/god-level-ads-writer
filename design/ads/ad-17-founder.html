@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#000;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:url("img/founder-a.png") center 30% / cover no-repeat;}
+/* scrims for legibility */
+.top{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,24,.72) 0%,rgba(6,10,24,0) 30%);}
+.bot{position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,7,18,.94) 6%,rgba(4,7,18,.5) 26%,rgba(4,7,18,0) 44%);}
+
+.logo{position:absolute;top:60px;left:64px;z-index:5;display:flex;align-items:center;gap:12px;
+  font-size:28px;font-weight:800;letter-spacing:-.02em;color:#fff;}
+.logo .dot{width:16px;height:16px;border-radius:50%;background:#2347ec;box-shadow:0 0 0 5px rgba(35,71,236,.25);}
+.logo .t{opacity:.55;}
+
+.block{position:absolute;left:64px;right:64px;bottom:74px;z-index:5;}
+.h{font-size:104px;font-weight:900;line-height:.94;letter-spacing:-.04em;color:#fff;}
+.h .hi{color:#c8f94c;}
+.sub{margin-top:22px;font-size:32px;line-height:1.32;font-weight:500;color:rgba(255,255,255,.82);
+  letter-spacing:-.01em;max-width:760px;}
+.cta{margin-top:30px;display:inline-flex;align-items:center;gap:13px;background:#c8f94c;color:#0a1020;
+  font-size:28px;font-weight:800;letter-spacing:-.01em;padding:18px 30px;border-radius:14px;}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="top"></div>
+    <div class="bot"></div>
+    <div class="logo"><span class="dot"></span><span><b>everything</b><span class="t">ai</span></span></div>
+    <div class="block">
+      <div class="h">You're the <span class="hi">bottleneck.</span></div>
+      <div class="sub">An AI sales rep answers every lead in 60 seconds — even at 2am. Plus a real team behind it.</div>
+      <div class="cta">Start for $20 →</div>
+    </div>
+  </div>
+</body></html>

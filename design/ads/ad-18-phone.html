@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{background:#0a1a4a;}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden;
+  font-family:'Inter','Liberation Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  background:url("img/phone-a.png") center 60% / cover no-repeat;}
+.top{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,70,.82) 0%,rgba(8,20,70,.2) 34%,rgba(8,20,70,0) 50%);}
+.bot{position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,16,56,.8) 4%,rgba(6,16,56,0) 30%);}
+
+.logo{position:absolute;top:60px;left:64px;z-index:5;display:flex;align-items:center;gap:12px;
+  font-size:28px;font-weight:800;letter-spacing:-.02em;color:#fff;}
+.logo .dot{width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.18);}
+.logo .t{opacity:.6;}
+
+.block{position:absolute;left:64px;right:64px;top:150px;z-index:5;}
+.eyebrow{font-family:'Liberation Mono',monospace;font-size:21px;letter-spacing:.26em;
+  color:#c8f94c;text-transform:uppercase;margin-bottom:24px;}
+.h{font-size:96px;font-weight:900;line-height:.96;letter-spacing:-.04em;color:#fff;}
+.h .hi{color:#c8f94c;}
+
+.foot{position:absolute;left:64px;right:64px;bottom:70px;z-index:5;display:flex;align-items:center;justify-content:space-between;}
+.cta{display:inline-flex;align-items:center;gap:13px;background:#c8f94c;color:#0a1020;
+  font-size:28px;font-weight:800;letter-spacing:-.01em;padding:18px 30px;border-radius:14px;}
+.url{font-family:'Liberation Mono',monospace;font-size:21px;letter-spacing:.08em;color:rgba(255,255,255,.66);}
+</style></head>
+<body>
+  <div class="canvas">
+    <div class="top"></div>
+    <div class="bot"></div>
+    <div class="logo"><span class="dot"></span><span><b>everything</b><span class="t">ai</span></span></div>
+    <div class="block">
+      <div class="eyebrow">Speed to lead</div>
+      <div class="h">Every lead.<br>Answered in <span class="hi">60 seconds.</span></div>
+    </div>
+    <div class="foot">
+      <div class="cta">Start for $20 →</div>
+      <div class="url">everythingai.com</div>
+    </div>
+  </div>
+</body></html>
