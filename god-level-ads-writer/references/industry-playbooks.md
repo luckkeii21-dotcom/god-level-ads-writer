@@ -18,6 +18,13 @@ _Last updated: 2025-04 | Source: Deep research + client analysis_
 
 ## 1. Med Spa / Aesthetics
 
+> **🇹🇷 TURKEY MODE WARNING:** The offers below (prices, discounts, free consult + discount,
+> patient testimonials, before/after promos) are for the USA. In Turkey, doctors, dentists and
+> all health institutions may NOT run paid ads, price/discount/campaign/installment content or
+> testimonial-based promotion for the domestic audience (Sağlık Hizmetlerinde Tanıtım ve
+> Bilgilendirme Faaliyetleri Hakkında Yönetmelik, 12 Nov 2025). See
+> `turkey-market.md` Section 8 before writing anything for a Turkish health business.
+
 ### Best-Performing Offers
 - $500 discount voucher + free consultation (achieved $7 CPL in testing)
 - "First treatment free" or deeply discounted gateway facial ($25–$29)
@@ -59,6 +66,13 @@ _Last updated: 2025-04 | Source: Deep research + client analysis_
 ---
 
 ## 2. Dental
+
+> **🇹🇷 TURKEY MODE WARNING:** The offers below (prices, discounts, free consult + discount,
+> patient testimonials, before/after promos) are for the USA. In Turkey, doctors, dentists and
+> all health institutions may NOT run paid ads, price/discount/campaign/installment content or
+> testimonial-based promotion for the domestic audience (Sağlık Hizmetlerinde Tanıtım ve
+> Bilgilendirme Faaliyetleri Hakkında Yönetmelik, 12 Nov 2025). See
+> `turkey-market.md` Section 8 before writing anything for a Turkish health business.
 
 ### Best-Performing Offers (Ranked)
 1. **$99 New Patient Special** (exam + X-ray + cleaning) — consistent top performer

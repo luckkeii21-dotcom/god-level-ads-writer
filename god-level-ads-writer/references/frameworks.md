@@ -16,6 +16,7 @@ _Last updated: 2026-04 | Source: Deep research + Meta Ads Masternote + Andromeda
 9. The Second-by-Second 60s Framework
 10. Us vs. Them — Mid-Funnel Differentiation
 11. Framework Selection Guide
+12. Cialdini's Principles of Persuasion (layer on top of any framework)
 
 ---
 
@@ -292,3 +293,36 @@ Is the audience solution-aware (knows what they want, choosing between options)?
   → Lead with differentiation, not problem establishment
   → MOF proof (specific switcher testimonial) outperforms any other proof type here
 ```
+
+---
+
+## 12. Cialdini's Principles of Persuasion (Layer on Any Framework)
+
+_Added: 2026-11 | Source: Robert Cialdini, "Influence" (6 principles) + "Pre-Suasion" (7th: Unity) | Status: `[PROVEN WINNER]` as theory, mandatory for client Online Ticaret Üniversitesi_
+
+Cialdini's principles are not a script structure. They are **persuasion levers placed inside**
+whatever framework you chose (PAS, Hook-Story-Offer, etc.). Label them in the script with
+`[CIALDINI: Principle]` when a client file asks for it, and add a "Cialdini Map" line to the
+Strategic Plan (which principle, at which second, how).
+
+| # | Principle (TR) | What it is | Where it fits in an ad | Example (TR) |
+|---|----------------|-----------|------------------------|--------------|
+| 1 | **Reciprocity (Karşılıklılık)** | Give value first; people feel the urge to give back | Body, right after the hook | "Sana klip seçerken kullandığımız 3 kuralı vereyim." |
+| 2 | **Commitment & Consistency (Tutarlılık)** | A small "yes" leads to a bigger one | Hook question, micro-tasks, application/quiz steps | "Bir saatlik podcastten 30 saniyelik anı bulabiliyor musun?" |
+| 3 | **Social Proof (Sosyal Kanıt)** | People follow what similar people do | Body proof, mid/final CTA | "Geçen dönem 340 kişi bitirdi." |
+| 4 | **Authority (Otorite)** | Credible expertise lowers risk | Bridge (who is speaking and why listen) | "11 yıldır e-ticaret eğitimi veriyorum." |
+| 5 | **Liking (Sempati)** | We say yes to people we like and relate to | Tone, behind-the-scenes, honesty, humor | "Dürüst olayım, tempomuz yüksek." |
+| 6 | **Scarcity (Kıtlık)** | Limited quantity or time raises value | Final CTA (and launch close ads) | "Kontenjan 40 kişi, kayıtlar pazar gece kapanıyor." |
+| 7 | **Unity (Birlik)** | Shared identity: "one of us" | Callout hooks, community framing | "Kendi işini kuran biri olarak bunu bilirsin." |
+
+**Rules:**
+- Use at least 3-4 principles per ad; never all 7 crammed into 30 seconds.
+- **Scarcity and social proof must be true and verifiable.** Fake countdowns, invented student
+  numbers or "last 3 spots" lies are deceptive practices (illegal in Turkey and most markets)
+  and destroy trust. Use `[X]` placeholders when the user has not supplied the real number.
+- Authority uses only real titles and real credentials.
+- Reciprocity works best when the value is usable on its own (a tip they can apply today),
+  not a teaser.
+- Commitment is strongest when the viewer answers the hook question "yes" in their head.
+  Write hook questions the right avatar can only answer "yes" to.
+

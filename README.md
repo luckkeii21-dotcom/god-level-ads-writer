@@ -9,6 +9,27 @@ A professional skill for writing every type of ad: short-form UGC video scripts,
 - Mini VSL (2–5 min) and full Video Sales Letters
 - Static image ad copy and carousel ads
 - Complete Meta ad copy (primary text, headline, description, CTA)
+- English (USA), Hinglish (India) and **Turkish (Turkey Mode)**
+
+## 🇹🇷 Türkiye Modu (Turkey Mode)
+
+Türkçe yazdığınızda ya da pazar Türkiye olduğunda skill otomatik olarak **Türkiye Modu**'na geçer
+ve tüm süreci Türkçe yürütür. Kurallar `god-level-ads-writer/references/turkey-market.md` dosyasındadır:
+
+- Türkçe dil yapısı: sondan eklemeli yapıya göre kelime/süre tablosu, vurgu ve devrik cümle,
+  Türkçe karakterler, büyük İ, kesme işareti, sayı ve TL biçimi, sık yazım hataları
+- Günlük konuşma kalıpları: sen/siz seçimi, doğal açılışlar, kuşaklara göre dil, hitap kelimeleri
+- Türkçe yapay zekâ ve çeviri kokusu yasaklı listesi (yeniden yazım örnekleriyle)
+- Türkçe hook kütüphanesi
+- Meta'nın Türkiye'deki uygulaması: kişisel özellik politikası, yasak kategoriler, WhatsApp/DM reklamları
+- Türk reklam hukuku: influencer "reklam" ibaresi, yapay zekâ karakter açıklaması, indirim kuralları,
+  doğrulanmış yorumlar, KVKK/İYS
+- Sağlık sektörü uyarısı (hekim, diş, klinik reklam yasağı ve sağlık turizmi istisnası)
+- Türk kitlesine göre teklifler, CTA'lar, güven sinyalleri, reklam takvimi ve örnek senaryolar
+
+> Hukuki bilgiler yazım rehberidir, hukuki görüş değildir. Yayından önce güncel mevzuatı kontrol edin.
+
+Örnek: *"Kadıköy'deki kafem için 30 saniyelik UGC reklam senaryosu yaz"*
 
 ## Works for
 

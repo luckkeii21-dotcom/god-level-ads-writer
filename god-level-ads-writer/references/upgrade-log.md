@@ -144,10 +144,13 @@ Conversion Priority Rule and Prioritization Rules framework added.
 | Hook types, examples, data | `references/hooks.md` |
 | Industry-specific angles, offers, CTAs | `references/industry-playbooks.md` |
 | India market (Hinglish, WhatsApp, culture) | `references/india-market.md` |
+| Turkey market (Turkish language, Meta + Turkish ad law, health rules) | `references/turkey-market.md` |
 | Offer construction, CTAs, urgency, risk reversal | `references/offer-cta-library.md` |
 | All ad format specifications | `references/ad-formats.md` |
 | Anti-AI writing rules, Voice DNA, human writing | `references/writing-voice.md` |
 | Client-specific context | `references/clients/[client-name].md` |
+| Online Ticaret Üniversitesi / Digiens Akademi | `references/clients/online-ticaret-universitesi.md` |
+| Cialdini persuasion principles | `references/frameworks.md` Section 12 |
 | New industry added after initial build | `references/[industry-name].md` |
 
 ---
@@ -197,6 +200,96 @@ Conversion Priority Rule and Prioritization Rules framework added.
 
 ---
 
+### ENTRY 006
+**Date:** 2026-11
+**Source:** Turkish advertising regulation research (Reklam Kurulu, Ticaret Bakanlığı, Sağlık
+Bakanlığı, Resmî Gazete), Meta advertising standards, Turkish linguistics and spoken-language analysis
+**Added by:** User request: permanent Turkey Mode
+**Status:** `[THEORETICAL]` for language/hook/offer guidance (test in live campaigns) |
+regulatory notes verified against sources as of 2026-11 (re-check before publishing)
+
+**What was added:**
+1. **Turkey Mode (Türkiye Modu)** with auto-activation when the user writes in Turkish or the
+   market is Turkey. Full process runs in Turkish.
+2. **Turkish language structure:** agglutination, Turkish timing/word-count table
+   (30s ≈ 55–62 words), SOV word order and pre-verb emphasis, inverted sentences in hooks,
+   Turkish characters and İ/I capitalization, apostrophes, number/currency format, common
+   spelling errors (de/da, ki, mi).
+3. **Spoken Turkish patterns:** sen/siz decision table, natural openers, filler dosage, register
+   by generation, hitap words (hocam, abi/abla, kanka), idioms, regional guidance.
+4. **Turkish anti-AI ban list:** contrast-negation equivalents, translated openers, corporate
+   brochure language, book suffixes (-mektedir), translationese, with rewrite examples.
+5. **Turkish hook library** across the 18 hook types.
+6. **Meta in Turkey:** personal-attributes traps in Turkish, banned/restricted categories
+   (alcohol, tobacco, illegal betting, fortune-telling, crypto, financial), Click-to-WhatsApp,
+   DM ads, lead quality, KVKK in lead forms, no targeted ads to minors.
+7. **Turkish ad law:** covert advertising ban, "reklam"/"tanıtım" influencer label (2026),
+   AI-character disclosure and AI clones of real people ban (2026), substantiated claims,
+   environmental claims (2026), discount reference price (10 days per 2026 amendment, previously
+   30), "ücretsiz", taksit, verified reviews only (2026), comparative ads, KVKK/İYS, 14-day
+   withdrawal right, sensitive topics and 10 Kasım.
+8. **Health sector override:** 12 Nov 2025 health promotion regulation (no domestic paid ads,
+   prices, discounts, testimonials, comparisons; before/after conditions; health tourism only
+   via separate foreign-facing accounts in non-Turkish languages, Turkey excluded from targeting).
+9. **Turkish offers, CTAs, WhatsApp greeting template, urgency do/don't, Turkish ad calendar,
+   sector adaptations, US vs Turkey comparison, three full Turkish examples, Turkey checklist.**
+
+**Files created/updated:**
+- `references/turkey-market.md` (new file)
+- `SKILL.md`: Turkish trigger keywords, market question, auto-detect rule, Turkish ban pointer,
+  Turkish timing note, Turkey Mode Check, Turkey delivery rules, Turkey Mode block, reference table
+- `references/industry-playbooks.md`: Turkey warning on Med Spa and Dental sections
+
+**Conflicts with existing knowledge:** US health-sector offers in `industry-playbooks.md` and
+`offer-cta-library.md` conflict with Turkish law. Resolved: in Turkey Mode, `turkey-market.md`
+wins (legal compliance is a precondition for conversion; a rejected or fined ad converts nothing).
+
+---
+
+### ENTRY 007
+**Date:** 2026-11
+**Source:** User (Online Ticaret Üniversitesi team practice) + Robert Cialdini, "Influence" / "Pre-Suasion"
+**Added by:** User request
+**Status:** `[TESTED]` multi-CTA architecture (client team practice) | `[THEORETICAL]` recruitment format
+
+**What was added:**
+1. **Client file** `references/clients/online-ticaret-universitesi.md`: launch, education and
+   hiring ads; multi-CTA architecture (early CTA by second 20, mid CTA for 60s+, final CTA;
+   same single action every time); mandatory Cialdini labeling; launch ad patterns.
+2. **Cialdini's principles** (6 + Unity) as `frameworks.md` Section 12, with Turkish examples
+   and truthfulness rules for scarcity and social proof.
+3. **Recruitment / hiring ad format** as `ad-formats.md` Format 9.
+4. **SKILL.md:** client-file auto-read rule, client and hiring triggers, CTA rule 8 and Phase 5
+   check updated to allow repeated same-action CTAs, Cialdini Map in the Strategic Plan,
+   recruitment row in the format table, reference table rows.
+
+**Conflicts with existing knowledge:** SKILL.md rule 8 / Phase 5 said the CTA is stated exactly
+once. Resolved: the rule is "one action"; repeating that same action at set timestamps is allowed
+when a client file requires it (the Full VSL spec already repeated the CTA 2-3 times).
+
+---
+
+### ENTRY 008
+**Date:** 2026-11
+**Source:** User feedback on the first DGNS Akademi hiring ad
+**Added by:** User
+**Status:** `[TESTED]` (user-approved rule)
+
+**What changed:**
+- Hiring ads for this client: Hook → Body → one CTA only. Light production. No multi-CTA.
+- Describe the ideal candidate in a few "sen" sentences from the 3-4 most important
+  requirements instead of listing all requirements; full list goes to the caption.
+- No internal operational numbers (e.g. "6 videos a day"); pace in general terms.
+- State the attractors clearly: fully remote, USD-based salary; CV by e-mail (in description).
+- Brand spelling corrected: Digiens Akademi (also written DGNS), Fatih Çoban's team.
+
+**Files updated:** `references/clients/online-ticaret-universitesi.md` (Sections 1, 2, 5, 6),
+`references/ad-formats.md` (Format 9), `SKILL.md` (triggers, client table).
+
+**Conflicts:** Overrides the multi-CTA architecture for hiring ads only; launch/education ads keep it.
+
+---
+
 ## KNOWN GAPS TO FILL (Future Upgrades)
 
 - [ ] Real winning ad examples with performance data — to be added as they come in
@@ -210,3 +303,4 @@ Conversion Priority Rule and Prioritization Rules framework added.
 - [ ] Client campaign results — add as they come in
 - [ ] Winning ad swipe file — real ads with results attached
 - [ ] VSL conversion benchmarks by industry and price point
+- [ ] Turkey Mode: real Turkish campaign results (CPL/CTR benchmarks in TL) to move guidance from THEORETICAL to TESTED
